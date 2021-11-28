@@ -1,0 +1,962 @@
+<html>
+<head><title>Chapter 2. Marking Our Content with HTML5</title>
+<link rel="stylesheet" href="epub.css" type="text/css"/>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2"/>
+</head>
+<body id="page">
+<h1 class="title"><a id="ch02"/>第二章，用HTML5标记我们的内容</h1>
+
+
+
+<p>许多人认为HTML是代码To.T1。嗯，不是。HTML的任何版本都是一种<em>标记</em>语言。</p>
+<p>标记语言是一种人类可以阅读和理解的计算机语言。它使用<a id="id114" class="indexterm"/>标记来定义内容的各个部分。HTML和XML是标记语言。</p>
+<p>为了进一步帮助区分，编码语言涉及更复杂的抽象、脚本编写、数据库连接、通过复杂协议以某种形式传输数据等等。编码确实是一个神奇的世界。</p>
+<p>HTML可以做所有这些，但它的方式不那么复杂，更容易理解。</p>
+<p>在本章中，我们将重点介绍标记内容背后的科学。内容可以有很多不同的形式：文本、图像、视频、表单、错误消息、成功消息、图像等等。此外，内容类型在浏览器中的行为方式或用户与其交互的方式将告诉我们特定内容应标记为哪种类型的HTML元素。</p>
+<p>例如，许多网页设计师将锚定链接<code class="literal">&lt;a href="#"&gt;Start 30 day trial&lt;/a&gt;</code><em>制作成</em>按钮。许多web开发人员使相同的锚定链接<em>表现得像</em>按钮。为什么不直接使用<code class="literal">&lt;input type="button" value="Start 30 day trial"&gt;</code>元素呢？更好的是，使用行为完全相同的<code class="literal">&lt;button&gt;Start 30 day trial&lt;/button&gt;</code>元素，更容易设置样式，并允许在必要时添加HTML内容。</p>
+<p>我们的想法是尽可能保持标记的语义。语义标记基本上意味着我们使用HTML标记来描述特定内容是什么。保留语义标记<a id="id115" class="indexterm"/>有很多好处：</p>
+<ul class="itemizedlist"><li class="listitem" style="list-style-type: disc">这对继承我们工作的其他web设计师或开发人员非常有帮助，因为他们将花更少的时间对我们所做的工作进行反向工程，并花更多的时间对其进行增强。</li>
+<li class="listitem" style="list-style-type: disc">它在可访问性方面也非常有用，因为它允许辅助技术按原样命名元素：按钮实际上是一个<code class="literal">&lt;button&gt;</code>，而不是一个样式类似于按钮的链接<code class="literal">&lt;a href="#"&gt;</code>。</li>
+<li class="listitem" style="list-style-type: disc">SEO从语义标记中获益匪浅，因为它允许搜索引擎更快更准确地索引内容。</li>
+</ul>
+
+<p>密切关注内容将大大有助于链中的每个人在项目期间帮助我们，帮助项目本身，并最终帮助我们的用户使用或不使用辅助技术。</p>
+<p>在标记你的内容时，我能给你的最好建议是<em>听内容</em>；它与你对话。确实如此。</p>
+<p>本章将介绍以下主题：</p>
+<ul class="itemizedlist"><li class="listitem" style="list-style-type: disc">HTML5元素在起作用</li>
+<li class="listitem" style="list-style-type: disc">使用<strong>网络易访问性倡议-可访问的富互联网应用程序</strong>（<strong>WAI-ARIA</strong>里程碑式角色提高易访问性</li>
+<li class="listitem" style="list-style-type: disc">RWD需要考虑的重要元标记</li>
+<li class="listitem" style="list-style-type: disc">一个完整的HTML5<a id="id117" class="indexterm"/>示例页面，带有ARIA角色和元标记</li>
+</ul>
+
+<p>那么，我们现在可以使用哪些HTML元素来确保我们的网站/应用程序在所有浏览器中都能正常运行？答案是<em>所有元素</em>。</p>
+<p>2014年10月28日，W3C最终确定了HTML5标准。然而，所有主流浏览器都支持HTML5元素已有好几年了。</p>
+<p>这对我们意味着，即使在W3C最终确定HTML5标准之前，我们也可以使用任何HTML5元素。因此，如果你一直在用HTML5构建网站/应用程序，那就继续这样做；如果你还没有开始使用HTML5，这是时候开始了。</p>
+<h1 class="title" id="sigil_toc_id_87"><a id="ch02lvl2sec19"/>该&lt;主&gt;元素</h1>
+
+
+
+<p>根据<a id="id118" class="indexterm"/>对<strong>Mozilla</strong><a id="id119" class="indexterm"/><strong>开发者网络</strong>（<strong>MDN</strong>的定义：</p>
+<blockquote class="blockquote"><p><em>HTML主元素（<code class="literal">&lt;main&gt;</code>可以用作文档主要内容的容器。主内容区域由直接与部分的中心主题或应用程序的中心功能相关或扩展的内容组成。此内容应为文档所独有，不包括在一组文档中重复的任何内容，如侧栏、导航链接、版权信息、网站徽标和搜索表单（当然，除非文档的主要功能是作为搜索表单）。与<code class="literal">&lt;article&gt;</code>和<code class="literal">&lt;section&gt;</code>不同，此元素不构成文档大纲。</em></p>
+</blockquote>
+
+<p>以下是关于<code class="literal">&lt;main&gt;</code>元素需要记住的几个要点：</p>
+<ul class="itemizedlist"><li class="listitem" style="list-style-type: disc">页面的<a id="id120" class="indexterm"/>顶级内容应包含在<code class="literal">&lt;main&gt;</code>元素中。</li>
+<li class="listitem" style="list-style-type: disc">内容应该是它独有的。</li>
+<li class="listitem" style="list-style-type: disc"><code class="literal">&lt;main&gt;</code>元素不应包含在<code class="literal">&lt;header&gt;</code>、<code class="literal">&lt;footer&gt;</code>、<code class="literal">&lt;nav&gt;</code>、<code class="literal">&lt;aside&gt;</code>或<code class="literal"> &lt;article&gt;</code>元素中。</li>
+<li class="listitem" style="list-style-type: disc">每页只能有一个<code class="literal">&lt;main&gt;</code>元素。</li>
+</ul>
+
+<p>考虑下面的例子：</p>
+<pre class="programlisting">&lt;body&gt;
+    <strong>&lt;main class="main-container" role="main"&gt;Content goes here</strong>
+    <strong>&lt;/main&gt;</strong>
+&lt;/body&gt;</pre>
+
+<h3 class="title" id="sigil_toc_id_88"><a id="tip25"/>提示</h3>
+<p>为了更好地度量，请对特殊字符使用HTML实体，例如，符号和字符（&amp;）为<code class="literal">&amp;amp;</code>，省略号字符（…）为<code class="literal">&amp;hellip;</code>。</p>
+
+
+
+
+<h1 class="title" id="sigil_toc_id_89">\12304；T0】第&lt;条&gt;要素</h1>
+
+
+
+<p>根据MDN定义，如<a id="id121" class="indexterm"/>：</p>
+<blockquote class="blockquote"><p><em>HTML Article元素（<code class="literal">&lt;article&gt;</code>表示文档、页面、应用程序或站点中的自包含组合，旨在独立分发或可重用，例如在联合中。这可以是论坛帖子、杂志或报纸文章、博客条目或任何其他独立内容。每个<code class="literal">&lt;article&gt;</code>都应该被识别，通常包括一个标题（<code class="literal">h1</code>-<code class="literal">h6</code>元素）作为<code class="literal">&lt;article&gt;</code>元素的子元素。</em></p>
+</blockquote>
+
+<p>以下是关于<code class="literal">&lt;article&gt;</code>元素需要记住的几个要点：</p>
+<ul class="itemizedlist"><li class="listitem" style="list-style-type: disc">Any self-contained content should be placed inside the <code class="literal">&lt;article&gt;</code> element.<p><em>自包含</em>意味着如果我们将<code class="literal">&lt;article&gt;</code>元素及其内部的所有内容放到另一个上下文中，所有内容都是自解释的，不需要任何其他内容就可以理解。</p></li>
+<li class="listitem" style="list-style-type: disc">一个<code class="literal">&lt;article&gt;</code>可以嵌套在另一个<code class="literal">&lt;article&gt;</code>元素中。</li>
+<li class="listitem" style="list-style-type: disc">一个页面中可以有多个<code class="literal">&lt;article&gt;</code>元素。</li>
+</ul>
+
+<p>考虑下面的例子：</p>
+<pre class="programlisting">&lt;body&gt;
+    &lt;main class="main-container" role="main"&gt;
+       <strong>&lt;article class="article-container flex-container"&gt;</strong>
+           <strong>Content goes here</strong>
+       <strong>&lt;/article&gt;</strong>
+    &lt;/main&gt;
+&lt;/body&gt;</pre>
+
+
+<h1 class="title" id="sigil_toc_id_90"><a id="ch02lvl2sec21"/>第&lt;节&gt;元素</h1>
+
+
+
+<p>根据MDN定义，如<a id="id123" class="indexterm"/>：</p>
+<blockquote class="blockquote"><p><em>HTML节元素（<code class="literal">&lt;section&gt;</code>表示文档的通用节，即内容的主题分组，通常带有标题。每个<code class="literal">&lt;section&gt;</code>都应该被识别，通常包括一个标题<code class="literal">(&lt;h1&gt;</code>-<code class="literal">&lt;h6&gt;</code>元素）作为<code class="literal">&lt;section&gt;</code>元素的子元素。</em></p>
+</blockquote>
+
+<p>以下是关于<code class="literal">&lt;section&gt;</code>元素需要记住的几个要点：</p>
+<ul class="itemizedlist"><li class="listitem" style="list-style-type: disc"><code class="literal">&lt;section&gt;</code>元素可用于封装一组相关内容。如果我们把这些相关内容从页面上下文中去掉，它们就不一定有意义。</li>
+<li class="listitem" style="list-style-type: disc">使用<code class="literal">&lt;section&gt;</code>元素的安全有效方法是将其放置在<code class="literal">&lt;article&gt;</code>元素内。您当然可以在不使用<code class="literal">&lt;section&gt;</code>元素的情况下使用<code class="literal">&lt;article&gt;</code>元素。尽管不是必需的，但建议在使用<code class="literal">&lt;section&gt;</code>元素时包含标题元素<code class="literal">(&lt;h1&gt;</code>、<code class="literal">&lt;h2&gt;</code>、<code class="literal">&lt;h3&gt;</code>等）。</li>
+<li class="listitem" style="list-style-type: disc">知道何时使用<code class="literal">&lt;section&gt;</code>元素和何时使用<code class="literal">&lt;article&gt;</code>元素可能会让人困惑。如果您有疑问，可以选择任一元素。</li>
+<li class="listitem" style="list-style-type: disc">一页中可以有多个<code class="literal">&lt;section&gt;</code>。</li>
+</ul>
+
+<p>考虑下面的例子：</p>
+<pre class="programlisting">&lt;body&gt;
+   &lt;main class="main-container" role="main"&gt;
+      &lt;article class="article-container flex-container"&gt;
+         <strong>&lt;section class="main-content"&gt;</strong>
+            <strong>&lt;header&gt;</strong>
+               <strong>&lt;h1&gt;The &lt;code&gt;&amp;lt;main&gt;&lt;/code&gt; element  &lt;/h1&gt;</strong>
+            <strong>&lt;/header&gt;</strong>
+            <strong>&lt;p&gt;As per the MDN definition:&lt;/p&gt;</strong>            <strong>&lt;blockquote&gt;</strong>
+<strong>               &lt;p&gt;The HTML Main Element (&lt;code&gt;&amp;lt;main&gt;&lt;/code&gt;) </strong>                     <strong>represents&amp;hellip;&lt;/p&gt;</strong>
+            <strong>&lt;/blockquote&gt;</strong>
+         <strong>&lt;/section&gt;</strong>
+      &lt;/article&gt;
+   &lt;/main&gt;
+&lt;/body&gt;</pre>
+
+
+<h1 class="title" id="sigil_toc_id_91"><a id="ch02lvl2sec22"/>在&lt;旁边的&gt;元素</h1>
+
+
+
+<p>根据MDN定义，如<a id="id124" class="indexterm"/>：</p>
+<blockquote class="blockquote"><p><em>HTML<code class="literal">&lt;aside&gt;</code>元素表示页面的一部分，其内容与其余部分相切，可以将其视为独立于该内容。这些部分通常表示为边栏或插入。它们通常包含侧栏上的定义，例如词汇表中的定义；还可能存在其他类型的信息，例如相关广告；作者的传记；网络应用；博客上的个人资料信息或相关链接。</em></p>
+</blockquote>
+
+<p>以下是关于<code class="literal">&lt;aside&gt;</code>元素需要记住的几个要点：</p>
+<ul class="itemizedlist"><li class="listitem" style="list-style-type: disc">与主要内容相切的内容可以包含在<code class="literal">&lt;aside&gt;</code>元素中。如果将此内容与主要内容分开，它本身仍然有意义。</li>
+<li class="listitem" style="list-style-type: disc">一页中可以有多个<code class="literal">&lt;aside&gt;</code>。</li>
+</ul>
+
+<p>考虑下面的例子：</p>
+<pre class="programlisting">&lt;body&gt;
+    &lt;main class="main-container" role="main"&gt;
+        &lt;article class="article-container flex-container"&gt;
+            &lt;section class="main-content"&gt;
+              &lt;header&gt;
+                  &lt;h1&gt;The &lt;code&gt;&amp;lt;main&gt;&lt;/code&gt; element  &lt;/h1&gt;
+              &lt;/header&gt;
+              &lt;p&gt;As per the MDN definition:&lt;/p&gt;
+              &lt;blockquote&gt;
+                  &lt;p&gt;The HTML Main Element (&lt;code&gt;&amp;lt;main&gt;&lt;/code&gt;) 
+  represents&amp;hellip;&lt;/p&gt;
+              &lt;/blockquote&gt;
+            &lt;/section&gt;
+<strong>            &lt;aside class="side-content" role="complementary"&gt;</strong>
+<strong>               &lt;h2&gt;What Does "Semantic HTML" Mean?&lt;/h2&gt;</strong>
+<strong>               &lt;p&gt;Semantic markup basically means that we use HTML tags </strong>
+<strong>  to describe what a specific piece of content is.&lt;/p&gt;</strong>
+<strong>            &lt;/aside&gt;</strong>
+         &lt;/article&gt;
+      &lt;/main&gt;
+&lt;/body&gt;</pre>
+
+<h3 class="title" id="sigil_toc_id_92"><a id="tip26"/>提示</h3>
+<p><em>切向内容</em>表示内容指的是手边的主题，但不是主信息<a id="id125" class="indexterm"/>的一部分。如果删除了<code class="literal">&lt;aside&gt;</code>元素中的此内容，则主消息不受影响。</p>
+
+
+
+<h1 class="title" id="sigil_toc_id_93"><a id="ch02lvl2sec23"/>该&lt;头&gt;元件</h1>
+
+
+
+<p>通常，我们<a id="id126" class="indexterm"/>认为我们的站点/应用程序的顶部是标题，这是正确的。顶部部分的编辑名称为<em>报头</em>。</p>
+<p>然而，从HTML5的角度来看，<em>报头</em>和<em>报头</em>之间存在差异。</p>
+<p>报头是<a id="id127" class="indexterm"/>我们站点/应用程序的主报头，只能有一个。它通常包含徽标、一些导航，可能还有一个搜索字段，等等。可以将收割台视为任何区段的顶部区域，并且可以有多个收割台。</p>
+<p>请注意，我们不是在讨论<code class="literal">&lt;header&gt;</code>元素，至少现在还没有。</p>
+<p>可以使用<code class="literal">&lt;header&gt;</code>元素构建报头，<code class="literal">&lt;header&gt;</code>元素也可以用于同一页面的其他部分。</p>
+<p>以下是MDN的定义：</p>
+<blockquote class="blockquote"><p><em>HTML<code class="literal">&lt;header&gt;</code>元素表示一组介绍性或导航辅助工具。它可能包含一些标题元素，但也包含其他元素，如徽标、包装部分的标题、搜索表单等。</em></p>
+</blockquote>
+
+<p>以下是关于<code class="literal">&lt;header&gt;</code>元素需要记住的几个要点：</p>
+<ul class="itemizedlist"><li class="listitem" style="list-style-type: disc">一个好的经验法则是在<code class="literal">&lt;section&gt;</code>元素中使用<code class="literal">&lt;header&gt;</code>元素。</li>
+<li class="listitem" style="list-style-type: disc">如果我们认为有必要，我们可以将标题（<code class="literal">h1</code>到<code class="literal">h6</code>封装在<code class="literal">&lt;header&gt;</code>元素中，但这并不是一种常见的做法或要求。</li>
+<li class="listitem" style="list-style-type: disc">一个页面中可以有多个<code class="literal">&lt;header&gt;</code>元素。</li>
+</ul>
+
+<p>在以下示例中，有两个突出显示的<code class="literal">&lt;header&gt;</code>部分，<code class="literal">&lt;section&gt;</code>元素内的桅杆头和标头：</p>
+<pre class="programlisting">&lt;body&gt;
+   <strong>&lt;header class="masthead" role="banner"&gt;</strong>
+<strong>      &lt;div class="logo"&gt;Mastering RWD with HTML5 &amp;amp; CSS3&lt;/div&gt;</strong>
+<strong>      &lt;div class="search" role="search"&gt;</strong>
+<strong>         &lt;form&gt;</strong>
+<strong>            &lt;label&gt;Search:</strong>
+<strong>               &lt;input type="text" class="field"&gt;</strong>
+<strong>               &lt;button&gt;Search Now!&lt;/button&gt;</strong>
+<strong>            &lt;/label&gt;</strong>
+<strong>         &lt;/form&gt;</strong>
+<strong>      &lt;/div&gt;</strong>
+<strong>   &lt;/header&gt;</strong>
+   &lt;main class="main-container" role="main"&gt;
+      &lt;article class="article-container flex-container"&gt;
+         &lt;section class="main-content"&gt;
+            <strong>&lt;header&gt;</strong>
+<strong>               &lt;h1&gt;The &lt;code&gt;&amp;lt;main&gt;&lt;/code&gt; element&lt;/h1&gt;</strong>
+<strong>            &lt;/header&gt;</strong>
+            &lt;p&gt;As per the MDN definition:&lt;/p&gt;
+            &lt;blockquote&gt;
+               &lt;p&gt;The HTML Main Element (&lt;code&gt;&amp;lt;main&gt;&lt;/code&gt;) represents&amp;hellip;&lt;/p&gt;
+            &lt;/blockquote&gt;
+         &lt;/section&gt;
+         &lt;aside class="side-content" role="complementary"&gt;
+            &lt;h2&gt;What Does "Semantic HTML" Mean?&lt;/h2&gt;
+            &lt;p&gt;Semantic markup basically means that we use HTML tags to describe what a specific piece of content is.&lt;/p&gt;
+         &lt;/aside&gt;
+      &lt;/article&gt;
+   &lt;/main&gt;
+&lt;/body&gt;</pre>
+
+
+<h1 class="title" id="sigil_toc_id_94"><a id="ch02lvl2sec24"/>该&lt;页脚&gt;元素</h1>
+
+
+
+<p>根据MDN定义，如<a id="id128" class="indexterm"/>：</p>
+<blockquote class="blockquote"><p><em>HTML页脚元素（<code class="literal">&lt;footer&gt;</code>表示其最近的分区内容或分区根元素的页脚。页脚通常包含有关章节作者、版权数据或相关文档链接的信息。</em></p>
+</blockquote>
+
+<p>以下是关于<code class="literal">&lt;footer&gt;</code>元素需要记住的几个要点：</p>
+<ul class="itemizedlist"><li class="listitem" style="list-style-type: disc">它应该始终包含有关其包含父元素的任何信息。</li>
+<li class="listitem" style="list-style-type: disc">尽管术语<em>页脚</em>表示页面、文章或应用程序的<em>底部部分</em>，但<code class="literal">&lt;footer&gt;</code>元素不一定必须位于底部。</li>
+<li class="listitem" style="list-style-type: disc">一个页面中可以有多个<code class="literal">&lt;footer&gt;</code>元素。</li>
+</ul>
+
+<p>考虑下面的例子：</p>
+<pre class="programlisting">&lt;body&gt;
+    &lt;header class="masthead" role="banner"&gt;
+      &lt;div class="logo"&gt;Mastering RWD with HTML5 &amp;amp; CSS3&lt;/div&gt;
+      &lt;div class="search" role="search"&gt;
+         &lt;form&gt;
+            &lt;label&gt;Search:
+               &lt;input type="text" class="field"&gt;
+               &lt;button&gt;Search Now!&lt;/button&gt;
+            &lt;/label&gt;
+         &lt;/form&gt;
+      &lt;/div&gt;
+    &lt;/header&gt;
+    &lt;main class="main-container" role="main"&gt;
+      &lt;article class="article-container flex-container"&gt;
+         &lt;section class="main-content"&gt;
+            &lt;header&gt;
+               &lt;h1&gt;The &lt;code&gt;&amp;lt;main&gt;&lt;/code&gt; element&lt;/h1&gt;
+            &lt;/header&gt;
+            &lt;p&gt;As per the MDN definition:&lt;/p&gt;
+            &lt;blockquote&gt;
+               &lt;p&gt;The HTML Main Element (&lt;code&gt;&amp;lt;main&gt;&lt;/code&gt;) represents&amp;hellip;&lt;/p&gt;
+            &lt;/blockquote&gt;
+         &lt;/section&gt;
+         &lt;aside class="side-content" role="complementary"&gt;
+            &lt;h2&gt;What Does "Semantic HTML" Mean?&lt;/h2&gt;
+            &lt;p&gt;Semantic markup basically means that we use HTML tags to describe what a specific piece of content is.&lt;/p&gt;
+         &lt;/aside&gt;
+      &lt;/article&gt;
+      <strong>&lt;footer class="main-footer" role="contentinfo"&gt;</strong>
+<strong>         &lt;p&gt;Copyright &amp;copy;&lt;/p&gt;</strong>
+<strong>         &lt;ul class="nav-container" role="navigation"&gt;</strong>
+<strong>            &lt;li&gt;&lt;a href="#"&gt;Footer Link 1&lt;/a&gt;&lt;/li&gt;</strong>
+<strong>            &lt;li&gt;&lt;a href="#"&gt;Footer Link 2&lt;/a&gt;&lt;/li&gt;</strong>
+<strong>            &lt;li&gt;&lt;a href="#"&gt;Footer Link 3&lt;/a&gt;&lt;/li&gt;</strong>
+<strong>            &lt;li&gt;&lt;a href="#"&gt;Footer Link 4&lt;/a&gt;&lt;/li&gt;</strong>
+<strong>            &lt;li&gt;&lt;a href="#"&gt;Footer Link 5&lt;/a&gt;&lt;/li&gt;</strong>
+<strong>         &lt;/ul&gt;</strong>
+<strong>      &lt;/footer&gt;</strong>
+   &lt;/main&gt;
+&lt;/body&gt;</pre>
+
+
+<h1 class="title" id="sigil_toc_id_95">“T0”、“T1”、“T2”不是元素</h1>
+
+
+
+<p>根据<a id="id130" class="indexterm"/>MDN定义：</p>
+<blockquote class="blockquote"><p><em>HTML导航元素（<code class="literal">&lt;nav&gt;</code>表示链接到其他页面或页面内部分的页面部分：带有导航链接的部分。</em></p>
+</blockquote>
+
+<p>以下是关于<code class="literal">&lt;nav&gt;</code>元素需要记住的几个要点：</p>
+<ul class="itemizedlist"><li class="listitem" style="list-style-type: disc">它用于对链接列表或集合进行分组。这些链接可以指向外部资源，也可以指向站点/应用程序中的其他页面。</li>
+<li class="listitem" style="list-style-type: disc">通常的做法是在<code class="literal">&lt;nav&gt;</code>元素中使用无序列表<code class="literal">&lt;ul&gt;</code>来构造链接，因为这样更容易设置样式。</li>
+<li class="listitem" style="list-style-type: disc">在<code class="literal">&lt;header&gt;</code>元素中包含<code class="literal">&lt;nav&gt;</code>也是一种常见做法，但不是必需的。</li>
+<li class="listitem" style="list-style-type: disc">并非所有链接组都必须位于<code class="literal">&lt;nav&gt;</code>元素内。如果我们在<code class="literal">&lt;footer&gt;</code>标记中有一个链接列表，那么在<code class="literal">&lt;nav&gt;</code>标记中也没有必要包含这些链接。</li>
+<li class="listitem" style="list-style-type: disc">一个页面中可以有多个<code class="literal">&lt;nav&gt;</code>元素，例如，主导航、实用导航和<code class="literal">&lt;footer&gt;</code>导航。</li>
+</ul>
+
+<p>考虑下面的例子：</p>
+<pre class="programlisting">&lt;body&gt;
+    &lt;header class="masthead" role="banner"&gt;
+      &lt;div class="logo"&gt;Mastering RWD with HTML5 &amp;amp; CSS3&lt;/div&gt;
+      &lt;div class="search" role="search"&gt;
+         &lt;form&gt;
+            &lt;label&gt;Search:
+               &lt;input type="text" class="field"&gt;
+               &lt;button&gt;Search Now!&lt;/button&gt;
+            &lt;/label&gt;
+         &lt;/form&gt;
+      &lt;/div&gt;
+    &lt;/header&gt;
+    <strong>&lt;nav class="main-nav" role="navigation"&gt;</strong>
+<strong>      &lt;ul class="nav-container"&gt;</strong>
+<strong>         &lt;li&gt;&lt;a href="#"&gt;Link 1&lt;/a&gt;&lt;/li&gt;</strong>
+<strong>         &lt;li&gt;&lt;a href="#"&gt;Link 2&lt;/a&gt;&lt;/li&gt;</strong>
+<strong>         &lt;li&gt;&lt;a href="#"&gt;Link 3&lt;/a&gt;&lt;/li&gt;</strong>
+<strong>         &lt;li&gt;&lt;a href="#"&gt;Link 4&lt;/a&gt;&lt;/li&gt;</strong>
+<strong>      &lt;/ul&gt;</strong>
+<strong>    &lt;/nav&gt;</strong>
+    &lt;main class="main-container" role="main"&gt;
+      &lt;article class="article-container flex-container"&gt;
+         &lt;section class="main-content"&gt;
+            &lt;header&gt;
+               &lt;h1&gt;The &lt;code&gt;&amp;lt;main&gt;&lt;/code&gt; element&lt;/h1&gt;
+            &lt;/header&gt;
+            &lt;p&gt;As per the MDN definition:&lt;/p&gt;
+            &lt;blockquote&gt;
+               &lt;p&gt;The HTML Main Element (&lt;code&gt;&amp;lt;main&gt;&lt;/code&gt;) represents&amp;hellip;&lt;/p&gt;
+            &lt;/blockquote&gt;
+         &lt;/section&gt;
+         &lt;aside class="side-content" role="complementary"&gt;
+            &lt;h2&gt;What Does "Semantic HTML" Mean?&lt;/h2&gt;
+            &lt;p&gt;Semantic markup basically means that we use HTML tags to describe what a specific piece of content is.&lt;/p&gt;
+         &lt;/aside&gt;
+      &lt;/article&gt;
+      &lt;footer class="main-footer" role="contentinfo"&gt;
+         &lt;p&gt;Copyright &amp;copy;&lt;/p&gt;
+         &lt;ul class="nav-container" role="navigation"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Footer Link 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Footer Link 2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Footer Link 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Footer Link 4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Footer Link 5&lt;/a&gt;&lt;/li&gt;
+         &lt;/ul&gt;
+      &lt;/footer&gt;
+    &lt;/main&gt;
+&lt;/body&gt;</pre>
+
+
+<h1 class="title" id="sigil_toc_id_96"><a id="ch02lvl1sec12"/>使用WAI-ARIA地标角色增加可访问性</h1>
+
+
+
+<p>网络中最被忽视的一个方面是可访问性，除非你是致力于这一主题的团队的一员。作为网页设计师和网页开发者，我们很少想到残疾用户访问网页，并使用我们的网站或应用程序与屏幕阅读器和其他辅助技术。实际上，我们首先考虑的是支持传统浏览器，而不是增加产品的可访问性。</p>
+<p>在本章中，我们将讨论什么是<strong>WAI-ARIA里程碑角色</strong>，以及如何在我们的标记中轻松实现这些角色<a id="id132" class="indexterm"/>，增强我们文档的语义，为用户提供辅助技术，使他们在任何现代浏览器上使用键盘浏览我们的网站/应用程序时获得更好、愉快的体验。</p>
+<h3 class="title" id="sigil_toc_id_97"><a id="note04"/>注</h3>
+<p><strong>WAI-ARIA</strong>代表<strong>网络无障碍倡议——无障碍富互联网应用</strong>的<a id="id133" class="indexterm"/>。</p>
+
+
+<h2 class="title" id="sigil_toc_id_98"><a id="ch02lvl2sec26"/>WAI-ARIA标志性角色</h2>
+
+
+
+<p>WAI-ARIA<a id="id134" class="indexterm"/>里程碑式角色也可以称为<em>ARIA角色</em>，所以我们将使用这个术语。</p>
+<p>ARIA角色在HTML5元素中实现时如下所示：</p>
+<pre class="programlisting">&lt;header <strong>role="banner"</strong>&gt;</pre>
+
+<p>我们可以使用多种ARIA角色，但在本书中，我们将重点介绍更易于实现的角色，这些角色将有效地提高网站/应用程序的可访问性。</p>
+<h3 class="title" id="sigil_toc_id_99"><a id="ch02lvl3sec15"/>旗帜角色</h3>
+
+
+
+<p>以下是需要记住的几点要点：</p>
+<ul class="itemizedlist"><li class="listitem" style="list-style-type: disc">此角色通常应用于页面顶部<code class="literal">&lt;header&gt;</code>。</li>
+<li class="listitem" style="list-style-type: disc">标题区域包含页面最突出的标题或标题。</li>
+<li class="listitem" style="list-style-type: disc">通常，具有<code class="literal">role="banner"</code>的内容会不断出现在整个网站上，而不是出现在单个特定页面中。</li>
+<li class="listitem" style="list-style-type: disc">每页/文档只允许一个<code class="literal">role="banner"</code>。</li>
+</ul>
+
+<p>考虑下面的例子：</p>
+<pre class="programlisting"><strong>&lt;header class="masthead" role="banner"&gt;</strong>
+    &lt;div class="logo"&gt;Mastering RWD with HTML5 &amp;amp; CSS3&lt;/div&gt;
+    &lt;div class="search" role="search"&gt;
+      &lt;form&gt;
+         &lt;label&gt;Search:
+            &lt;input type="text" class="field"&gt;
+            &lt;button&gt;Search Now!&lt;/button&gt;
+         &lt;/label&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+<strong>&lt;/header&gt;</strong>
+</pre>
+
+
+<h3 class="title" id="sigil_toc_id_100"><a id="ch02lvl3sec16"/>导航角色</h3>
+
+
+
+<p>以下是需要记住的几点要点：</p>
+<ul class="itemizedlist"><li class="listitem" style="list-style-type: disc">此角色通常应用于<code class="literal">&lt;nav&gt;</code>元素，但也可以应用于其他容器，如<code class="literal">&lt;div&gt;</code>或<code class="literal">&lt;ul&gt;</code>。</li>
+<li class="listitem" style="list-style-type: disc">它描述了一组导航元素/链接。这些链接既可以用于浏览网站，也可以用于显示它们所在的页面。</li>
+<li class="listitem" style="list-style-type: disc">每页可以有多个<code class="literal">role="navigation"</code>。</li>
+</ul>
+
+<p>考虑下面的示例，其中将角色应用到主要的AutoT0}元素：</p>
+<pre class="programlisting"><strong>&lt;nav class="main-nav" role="navigation"&gt;</strong>
+    &lt;ul class="nav-container"&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Link 4&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+<strong>&lt;/nav&gt;</strong>
+</pre>
+
+<p>考虑下面的示例，其中角色被应用到页脚导航的AutoT0}元素：</p>
+<pre class="programlisting">&lt;footer class="main-footer" role="contentinfo"&gt;
+    &lt;p&gt;Copyright &amp;copy;&lt;/p&gt;
+    <strong>&lt;ul class="nav-container" role="navigation"&gt;</strong>
+      &lt;li&gt;&lt;a href="#"&gt;Footer Link 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Footer Link 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Footer Link 3&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Footer Link 4&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Footer Link 5&lt;/a&gt;&lt;/li&gt;
+    <strong>&lt;/ul&gt;</strong>
+&lt;/footer&gt;</pre>
+
+<p>对于我们将<code class="literal">navigation</code>角色添加到哪个元素，没有特别的偏好。如果我们将其添加到<code class="literal">&lt;nav&gt;</code>元素或<code class="literal">&lt;ul&gt;</code>元素中，则是相同的。</p>
+
+<h3 class="title" id="sigil_toc_id_101"><a id="ch02lvl3sec17"/>主要角色</h3>
+
+
+
+<p>以下是需要记住的几点要点：</p>
+<ul class="itemizedlist"><li class="listitem" style="list-style-type: disc">此角色通常应用于页面的<code class="literal">&lt;main&gt;</code>元素。</li>
+<li class="listitem" style="list-style-type: disc">页面主/中心主题的容器应标记此角色。</li>
+<li class="listitem" style="list-style-type: disc">每页/文档只允许一个<code class="literal">role="main"</code>。</li>
+</ul>
+
+<p>考虑下面的例子：</p>
+<pre class="programlisting">&lt;body&gt;
+    <strong>&lt;main class="main-container" role="main"&gt;</strong>Content goes here
+<strong>    &lt;/main&gt;</strong>
+&lt;/body&gt;</pre>
+
+
+<h3 class="title" id="sigil_toc_id_102">\12304；T0内容角色</h3>
+
+
+
+<p>以下是需要记住的几点要点：</p>
+<ul class="itemizedlist"><li class="listitem" style="list-style-type: disc">此角色通常应用于页面的主<code class="literal">&lt;footer&gt;</code>元素。</li>
+<li class="listitem" style="list-style-type: disc">此部分包含有关文档/站点/应用程序的信息。</li>
+<li class="listitem" style="list-style-type: disc">例如，如果该部分包含版权链接、脚注、隐私声明链接或条款和条件，则它是<code class="literal">role="contentinfo".</code>的最佳候选</li>
+<li class="listitem" style="list-style-type: disc">每页/文档只允许一个<code class="literal">role="contentinfo"</code>。</li>
+</ul>
+
+<p>考虑下面的例子：</p>
+<pre class="programlisting"><strong>&lt;footer class="main-footer" role="contentinfo"&gt;</strong>
+    &lt;p&gt;Copyright &amp;copy;&lt;/p&gt;
+    &lt;ul class="nav-container" role="navigation"&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Footer Link 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Footer Link 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Footer Link 3&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Footer Link 4&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Footer Link 5&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+<strong>&lt;/footer&gt;</strong>
+</pre>
+
+
+<h3 class="title" id="sigil_toc_id_103"><a id="ch02lvl3sec19"/>搜索角色</h3>
+
+
+
+<p>以下是需要记住的几点要点：</p>
+<ul class="itemizedlist"><li class="listitem" style="list-style-type: disc">此角色通常应用于属于页面/应用程序搜索功能的<code class="literal">&lt;form&gt;</code>元素。</li>
+<li class="listitem" style="list-style-type: disc">如果搜索表单包装在一个<code class="literal">&lt;div&gt;</code>元素中，那么这个角色也可以应用于该<code class="literal">&lt;div&gt;</code>元素。如果是这种情况，则无需将其添加到子元素<code class="literal">&lt;form&gt;</code>中。</li>
+<li class="listitem" style="list-style-type: disc">只要控件是实际的搜索功能，每页可以有多个<code class="literal">role="search"</code>。例如，在联系人表单上使用<code class="literal">role="search"</code>是不正确和不可靠的。</li>
+</ul>
+
+<p>考虑下面的例子，将角色应用到站点的搜索工具T00.元素：</p>
+<pre class="programlisting">&lt;div class="search"&gt;
+<strong>    &lt;form role="search"&gt;</strong>
+      &lt;label&gt;Search:
+         &lt;input type="text" class="field"&gt;
+         &lt;button&gt;Search Now!&lt;/button&gt;
+      &lt;/label&gt;
+<strong>    &lt;/form&gt;</strong>
+&lt;/div&gt;</pre>
+
+
+<h3 class="title" id="sigil_toc_id_104"><a id="ch02lvl3sec20"/>形式角色</h3>
+
+
+
+<p>以下是需要记住的几点要点：</p>
+<ul class="itemizedlist"><li class="listitem" style="list-style-type: disc">此角色通常应用于包含某种表单类型的<code class="literal">&lt;div&gt;</code>元素，但<em>除外</em>站点/应用程序的主要搜索表单，例如联系表单、注册表单、付款表单等。</li>
+<li class="listitem" style="list-style-type: disc">它应该<em>而不是</em>应用于实际的<code class="literal">&lt;form&gt;</code>元素，因为该元素已经有了辅助技术支持的默认角色语义。</li>
+</ul>
+
+<p>考虑下面的例子：</p>
+<pre class="programlisting"><strong>&lt;div class="contact-form" role="form"&gt;</strong>
+    &lt;header&gt;
+      &lt;h2&gt;Have Questions About HTML5?&lt;/h2&gt;
+    &lt;/header&gt;
+    &lt;form&gt;
+      &lt;div class="flex-container"&gt;
+         &lt;label class="label-col"&gt;Name: &lt;input type="text" class="field name" id="name" required&gt;&lt;/label&gt;
+         &lt;label class="label-col"&gt;Email: &lt;input type="email" class="field email" id="email" required&gt;&lt;/label&gt;
+      &lt;/div&gt;
+      &lt;label for="comments"&gt;Comments:&lt;/label&gt;
+      &lt;textarea class="comments" id="comments" cols="50" required&gt;&lt;/textarea&gt;
+      &lt;button&gt;Send Question!&lt;/button&gt;
+    &lt;/form&gt;
+<strong>&lt;/div&gt;</strong>
+</pre>
+
+
+<h3 class="title" id="sigil_toc_id_105"><a id="ch02lvl3sec21"/>互补作用</h3>
+
+
+
+<p>以下是需要记住的几点要点：</p>
+<ul class="itemizedlist"><li class="listitem" style="list-style-type: disc">此角色通常应用于<code class="literal">&lt;aside&gt;</code>元素。</li>
+<li class="listitem" style="list-style-type: disc">应在包含支持内容的区域使用；如果与内容分离，它本身仍然有意义。这几乎就是对<code class="literal">&lt;aside&gt;</code>元素的描述。</li>
+<li class="listitem" style="list-style-type: disc">每页可以有多个<code class="literal">role="complementary"</code>。</li>
+</ul>
+
+<p>考虑下面的例子：</p>
+<pre class="programlisting"><strong>&lt;aside class="side-content" role="complementary"&gt;</strong>
+    &lt;h2&gt;What Does "Semantic HTML" Mean?&lt;/h2&gt;
+    &lt;p&gt;Semantic markup basically means that we use HTML tags to describe what a specific piece of content is.&lt;/p&gt;
+<strong>&lt;/aside&gt;</strong>
+</pre>
+
+<h3 class="title" id="sigil_toc_id_106"><a id="note05"/>注</h3>
+<p><strong>WAI-ARIA角色说明</strong></p>
+<p>如果您<a id="id143" class="indexterm"/>对ARIA角色列表感到好奇，您可以访问Web平台网站，该网站的解释简单易懂：<a class="ulink" href="https://specs.webplatform.org/html-aria/webspecs/master/#docconformance">https://specs.webplatform.org/html-aria/webspecs/master/#docconformance </a></p>
+
+
+
+
+<h2 class="title" id="sigil_toc_id_107">RWD要考虑的重要元标记</h2>
+
+
+
+<p>网页设计师和开发人员使用元标记的方式有很多种，但这些广泛的解释超出了本书的范围，因此我们将重点关注与RWD相关并按预期工作的细节。</p>
+<p>以下元标记对于我们的响应站点/应用程序非常重要。这些元标记不仅适用于HTML5页面，还适用于任何版本的HTML。</p>
+<p>让我们开始吧。</p>
+<h3 class="title" id="sigil_toc_id_108"><a id="ch02lvl3sec22"/>视口元标记</h3>
+
+
+
+<p><code class="literal">viewport</code>元标签是RWD最重要的元标签。它是由苹果公司在其手机Safari浏览器中推出的。现在，其他移动浏览器也支持它。奇怪的是，这个元标记不是任何类型的web标准的一部分，但是如果我们希望我们的响应性网站/应用程序在小屏幕上正确显示，它是强制性的。</p>
+<p>此元标记的<a id="id146" class="indexterm"/>推荐语法如下：</p>
+<pre class="programlisting">&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</pre>
+
+<p>以下是一些需要记住的要点：</p>
+<ul class="itemizedlist"><li class="listitem" style="list-style-type: disc"><code class="literal">name="viewport"</code>指令描述元标记的类型。</li>
+<li class="listitem" style="list-style-type: disc"><code class="literal">content="width=device-width, initial-scale=1"</code>指令做了几件事：<ul class="itemizedlist"><li class="listitem" style="list-style-type: disc"><code class="literal">width</code>属性定义<code class="literal">viewport</code>元标记的大小。我们也可以使用特定的像素宽度，例如，<code class="literal">width=960</code>。</li>
+<li class="listitem" style="list-style-type: disc"><code class="literal">device-width</code>值是100%缩放CSS像素时的屏幕宽度。</li>
+<li class="listitem" style="list-style-type: disc"><code class="literal">initial-scale</code>值定义了页面首次加载时应显示的缩放级别。1表示100%缩放，1.5表示150%缩放。</li>
+</ul>
+</li>
+<li class="listitem" style="list-style-type: disc">使用<a id="id147" class="indexterm"/>这种语法，用户可以根据需要放大。这是一个用户体验最佳实践。</li>
+</ul>
+
+<h3 class="title" id="sigil_toc_id_109"><a id="note06"/>注</h3>
+<p>本书强烈反对使用以下<code class="literal">viewport</code>属性：<code class="literal">maximum-scale=1</code>和<code class="literal">user-scalable=no</code>。通过使用这些<code class="literal">viewport</code>属性，我们拒绝用户放大我们的网站/应用程序。我们永远不知道何时缩放对任何人都很重要，因此最好不要包含这些视口属性。</p>
+
+
+<p>为了帮助那些没有响应能力的网站在小屏幕上显示得更好，请添加网站创建时的特定像素宽度。例如，如果一个网站的宽度为960px，则向其添加此<code class="literal">viewport</code>元标记：</p>
+<pre class="programlisting">&lt;meta name="viewport" content="width=960"&gt;</pre>
+
+<p>如果您<a id="id148" class="indexterm"/>对阅读<code class="literal">viewport</code>元标记的更多细节感兴趣，MDN会很好地解释：<a class="ulink" href="https://developer.mozilla.org/en/docs/Mozilla/Mobile/Viewport_meta_tag">https://developer.mozilla.org/en/docs/Mozilla/Mobile/Viewport_meta_tag </a>。</p>
+
+<h3 class="title" id="sigil_toc_id_110"><a id="ch02lvl3sec23"/>X-UA兼容元标签</h3>
+
+
+
+<p><code class="literal">X-UA-Compatible</code>元标记仅针对Internet Explorer及其兼容性视图功能。<a id="id149" class="indexterm"/>众所周知，微软在IE8中引入了兼容性视图。</p>
+<p>此元标记的建议语法如下所示：</p>
+<pre class="programlisting">&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;</pre>
+
+<p>以下是一些需要记住的要点：</p>
+<ul class="itemizedlist"><li class="listitem" style="list-style-type: disc"><code class="literal">http-equiv="X-UA-Compatible"</code>指令告诉IE需要使用某个呈现引擎来呈现页面。</li>
+<li class="listitem" style="list-style-type: disc"><code class="literal">content="IE=edge"</code>指令告诉IE应该使用最新的呈现HTML和JavaScript引擎。</li>
+<li class="listitem" style="list-style-type: disc">使用<a id="id150" class="indexterm"/>这个元标记来触发IE最新的HTML和JavaScript引擎是非常好的，因为最新版本的IE总是有最新的安全更新和对更多功能的支持。</li>
+</ul>
+
+<h3 class="title" id="sigil_toc_id_111"><a id="tip27"/>提示</h3>
+<p>由于Chrome框架于2014年2月退役，因此不再需要使用<code class="literal">chrome=1</code>值。</p>
+
+
+<h3 class="title" id="sigil_toc_id_112"><a id="note07"/>注</h3>
+<p>Google Chrome Frame是旧版IE的插件。安装后，它将替换IE中的某些模块，如渲染和JavaScript引擎，从而改善用户体验。换句话说，这就像在IE上安装一个小版本的Google Chrome。</p>
+
+
+
+<h3 class="title" id="sigil_toc_id_113"><a id="ch02lvl3sec24"/>字符集元标记</h3>
+
+
+
+<p><code class="literal">charset</code>元标记告诉浏览器使用哪个字符集来解释内容。一些<a id="id151" class="indexterm"/>表示，包含字符集并不重要，因为服务器本身通过HTTP头向浏览器发送字符集。但是，在我们的页面中包含它也是一个很好的措施。</p>
+<p>如果HTML中未声明<code class="literal">charset</code>，并且服务器未将字符集发送到浏览器，则可能会错误显示某些特殊字符。</p>
+<p>HTML5中此元标记的推荐语法如下：</p>
+<pre class="programlisting">&lt;meta charset="utf-8"&gt;</pre>
+
+<p>以下是一些需要记住的要点：</p>
+<ul class="itemizedlist"><li class="listitem" style="list-style-type: disc">这个元标记是专门为HTML5文档创建的。主要的好处是可以编写更少的代码。</li>
+<li class="listitem" style="list-style-type: disc">对于HTML4和XHTML，您应该使用以下语法<code class="literal">:</code><pre class="programlisting">&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;</pre></li>
+<li class="listitem" style="list-style-type: disc">Another common value is <code class="literal">ISO-8859-1</code>, but <code class="literal">UTF-8</code> is more widely used because there is a better chance of the browser interpreting the content correctly.<h3 class="title" id="sigil_toc_id_114"><a id="note08"/>注</h3>
+<p><strong>UTF-8</strong>代表<strong>Unicode转换</strong><a id="id152" class="indexterm"/><strong>格式-8</strong>。</p>
+
+</li>
+</ul>
+
+
+
+
+<h1 class="title" id="sigil_toc_id_115"><a id="ch02lvl1sec13"/>包含ARIA角色和元标记的完整HTML5示例页面</h1>
+
+
+
+<p>既然<a id="id153" class="indexterm"/>我们已经了解了一些基本的HTML5<a id="id154" class="indexterm"/>元素，它们可以应用到的ARIA角色，以及用于显示的适当元标记，让我们在一个完整的HTML5页面中可视化所有这些元素：</p>
+<pre class="programlisting">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+<strong>    &lt;meta charset="utf-8"&gt;</strong>
+<strong>    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;</strong>
+<strong>    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</strong>
+    &lt;title&gt;Mastering RWD with HTML5 &amp;amp; CSS3&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/site-styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header class="masthead" <strong>role="banner"</strong>&gt;
+    &lt;div class="logo"&gt;Mastering RWD with HTML5 &amp;amp; CSS3&lt;/div&gt;
+    &lt;div class="search" <strong>role="search"</strong>&gt;
+      &lt;form&gt;
+         &lt;label&gt;Search:
+            &lt;input type="text" class="field"&gt;
+            &lt;button&gt;Search Now!&lt;/button&gt;
+         &lt;/label&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/header&gt;
+    &lt;nav class="main-nav" <strong>role="navigation"</strong>&gt;
+      &lt;ul class="nav-container"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Link 4&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;main class="main-container" <strong>role="main"</strong>&gt;
+      &lt;h1&gt;Chapter 2: Marking Our Content with HTML5&lt;/h1&gt;
+      &lt;p&gt;Many consider that HTML is "code". Well, it's not. HTML, any version of it, is a "markup" language. &lt;/p&gt;
+      &lt;article class="article-container flex-container"&gt;
+         &lt;section class="main-content"&gt;
+            &lt;header&gt;
+               &lt;h1&gt;The &lt;code&gt;&amp;lt;main&gt;&lt;/code&gt; element  &lt;/h1&gt;
+            &lt;/header&gt;
+            &lt;p&gt;As per the MDN definition:&lt;/p&gt;
+            &lt;blockquote&gt;
+               &lt;p&gt;The HTML Main Element (&lt;code&gt;&amp;lt;main&gt;&lt;/code&gt;) represents&amp;hellip;&lt;/p&gt;
+            &lt;/blockquote&gt;
+         &lt;/section&gt;
+         &lt;aside class="side-content" <strong>role="complementary"</strong>&gt;
+            &lt;h2&gt;What Does "Semantic HTML" Mean?&lt;/h2&gt;
+            &lt;p&gt;Semantic markup basically means that we use HTML tags to describe what a specific piece of content is.&lt;/p&gt;
+         &lt;/aside&gt;
+      &lt;/article&gt;
+      &lt;div class="contact-form" <strong>role="form"</strong>&gt;
+         &lt;header&gt;
+            &lt;h2&gt;Have Questions About HTML5?&lt;/h2&gt;
+         &lt;/header&gt;
+         &lt;form&gt;
+            &lt;div class="flex-container"&gt;
+               &lt;label class="label-col"&gt;Name: &lt;input type="text" class="field name" id="name" required&gt;&lt;/label&gt;
+               &lt;label class="label-col"&gt;Email: &lt;input type="email" class="field email" id="email" required&gt;&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;label for="comments"&gt;Comments:&lt;/label&gt;
+            &lt;textarea class="comments" id="comments" cols="50" required&gt;&lt;/textarea&gt;
+            &lt;button&gt;Send Question!&lt;/button&gt;
+         &lt;/form&gt;
+      &lt;/div&gt;
+      &lt;footer class="main-footer" <strong>role="contentinfo"</strong>&gt;
+         &lt;p&gt;Copyright &amp;copy;&lt;/p&gt;
+         &lt;ul class="nav-container" <strong>role="navigation"</strong>&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Footer Link 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Footer Link 2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Footer Link 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Footer Link 4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Footer Link 5&lt;/a&gt;&lt;/li&gt;
+         &lt;/ul&gt;
+      &lt;/footer&gt;
+    &lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+<p>作为一个额外的好处，让我们看看SCS，它把所有这些都结合在一起成为一个漂亮的响应页面。</p>
+<h3 class="title" id="sigil_toc_id_116"><a id="note09"/>注</h3>
+<p>下面的SCSS代码是使用桌面优先的方法构建的，因为在本书中我们将有条不紊地进入移动优先。</p>
+
+
+<p>以下是SCS：</p>
+<pre class="programlisting">//Media Query Mixin - Desktop-first
+@mixin forSmallScreens($media) {
+   @media (max-width: $media/16+em) { @content; }
+}
+//Nav
+.main-nav {
+    max-width: 980px;
+    margin: auto;
+    padding: 10px 5px;
+    background: #555;
+    @include forSmallScreens(420) {
+       padding: 5px 0;
+    }
+}
+
+//All Navigations
+.nav-container {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    @include forSmallScreens(420) {
+       flex-wrap: wrap;
+    }
+    li {
+       display: flex;
+       width: 100%;
+       margin: 0 5px;
+       text-align: center;
+       @include forSmallScreens(420) {
+          display: flex;
+          justify-content: center;
+          flex-basis: 45%;
+          margin: 5px;
+       }
+    }
+    a {
+       @extend %highlight-section;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       width: 100%;
+       padding: 10px;
+       color: white;
+    }
+}
+
+//Header
+.masthead {
+    display: flex;
+    justify-content: space-between;
+    max-width: 980px;
+    margin: auto;
+    padding: 10px;
+    background: #333;
+    border-radius: 3px 3px 0 0;
+    @include forSmallScreens(700) {
+       display: block;
+       text-align: center;
+    }
+}
+
+.logo {
+    @extend %highlight-section;
+    padding: 0 10px;
+    color: white;
+    line-height: 2.5;
+    @include forSmallScreens(420) {
+       font-size: .85em;
+    }
+}
+
+//Search field
+.search {
+    @extend %highlight-section;
+    padding: 5px;
+    color: white;
+    @include forSmallScreens(420) {
+       font-size: .85em;
+    }
+    .field {
+       width: auto;
+       margin: 0 10px 0 0;
+    }
+    button {
+       @include forSmallScreens(420) {
+          width: 100%;
+          margin-top: 10px;
+       }
+    }
+}
+
+//Main Container
+.main-container {
+    max-width: 980px;
+    margin: auto;
+    padding: 10px;
+    background: #999;
+    border-radius: 0 0 3px 3px;
+}
+
+//Article
+.article-container {
+    @extend %highlight-section;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+    //Main Content of the Page
+    .main-content {
+       @extend %highlight-section;
+       width: 75%;
+       margin-right: 10px;
+       padding: 10px;
+       @include forSmallScreens(600) {
+          width: 100%;
+       }
+       h1 {
+          margin: 0;
+       }
+    }
+
+    //Side Content
+    .side-content {
+       @extend %highlight-section;
+       width: 25%;
+       padding: 10px;
+       font-size: .8em;
+       background: #999;
+       @include forSmallScreens(600) {
+          width: 100%;
+          margin-top: 12px;
+       }
+       h2 {
+          margin: 0;
+       }
+       ol {
+          padding-left: 20px;
+       }
+       a {
+          color: #eee;
+       }
+    }
+
+//Contact Form
+.contact-form {
+    @extend %highlight-section;
+    width: 540px;
+    margin: 0 auto 20px;
+    padding: 20px;
+    @include forSmallScreens(600) {
+       width: 100%;
+    }
+    h2 {
+       margin-top: 0;
+    }
+    label, button {
+       display: block;
+    }
+    .comments {
+       height: 100px;
+    }
+    .flex-container {
+       justify-content: space-between;
+       @include forSmallScreens(600) {
+          display: flex;
+       }
+       @include forSmallScreens(400) {
+          display: block;
+       }
+    }
+    .label-col {
+       width: 48%;
+       @include forSmallScreens(400) {
+          width: 100%;
+       }
+    }
+}
+
+//Form Elements
+.field,
+.comments {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+    @include forSmallScreens(420) {
+       width: 100%;
+    }
+}
+
+//Footer
+.main-footer {
+    color: white;
+    padding: 10px;
+    background: #333;
+    p {
+       margin-top: 0;
+    }
+}
+
+//Placeholder
+%highlight-section {
+    border: white 1px solid;
+    border-radius: 3px;
+    background: rgba(white, .1);
+}
+
+//Helper Classes
+.flex-container {
+    display: flex;
+    @include forSmallScreens(600) {
+       display: block;
+    }
+}
+
+//General
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+blockquote {
+    font-style: italic;
+}</pre>
+
+
+<h1 class="title" id="sigil_toc_id_117"><a id="ch02lvl1sec14"/>输出桌面和手机屏幕截图</h1>
+
+
+
+<p>以下<a id="id157" class="indexterm"/>屏幕截图表示线框模式和样式模式下的原型/演示<a id="id158" class="indexterm"/>。您将能够看到桌面（980像素宽）和移动（320像素宽）输出。</p>
+<p>在线框屏幕截图中，不同色调的白色轮廓和灰色背景基本上是视觉线索，帮助您了解每个元素的边界在哪里，而无需使用浏览器的DevTools。</p>
+<p>另一方面，样式化的屏幕截图向您展示了使用少量CSS可以实现的功能。线框和样式化页面都使用完全相同的标记。</p>
+<p>页面的演示可在此处查看：</p>
+<ul class="itemizedlist"><li class="listitem" style="list-style-type: disc">访问<a class="ulink" href="http://codepen.io/ricardozea/pen/717c6ab2dab9646f814f0429153a6777">http://codepen.io/ricardozea/pen/717c6ab2dab9646f814f0429153a6777 </a>用于<a id="id159" class="indexterm"/>线框页面</li>
+<li class="listitem" style="list-style-type: disc">访问<a class="ulink" href="http://codepen.io/ricardozea/pen/244886bac2434369bd038294df72fdda">http://codepen.io/ricardozea/pen/244886bac2434369bd038294df72fdda </a>用于<a id="id160" class="indexterm"/>样式页面</li>
+</ul>
+
+<p>让我们看看截图。</p>
+<p>桌面输出[线框]如下所示：</p>
+<p> </p>
+<p><img src="graphics/B02102_02_01.jpg" alt="Output screenshots for desktop and mobile"/></p>
+<p>
+</p>
+<p><a id="id161" class="indexterm"/>桌面输出【样式】为<a id="id162" class="indexterm"/>如下：</p>
+<p><img src="graphics/B02102_02_02.jpg" alt="Output screenshots for desktop and mobile"/></p>
+<p><a id="id163" class="indexterm"/>移动输出【线框】为<a id="id164" class="indexterm"/>如下：</p>
+<p><img src="graphics/B02102_02_03.jpg" alt="Output screenshots for desktop and mobile"/></p>
+<p><a id="id165" class="indexterm"/>移动输出【样式】为<a id="id166" class="indexterm"/>如下：</p>
+<p><img src="graphics/B02102_02_04.jpg" alt="Output screenshots for desktop and mobile"/></p>
+
+<h1 class="title" id="sigil_toc_id_118"><a id="ch02lvl1sec15"/>总结</h1>
+
+
+
+<p>这是一个简短的章节，但肯定充满了重要的信息。</p>
+<p>我们了解到HTML是标记，而不是代码。我们还看到各种HTML5元素在起作用。这将帮助我们了解哪些HTML5元素可用于标记我们所提供的内容。</p>
+<p>我们还学习了如何使用ARIA角色标记HTML，以便使用辅助技术的用户更容易访问我们的网站/应用程序。</p>
+<p>我们还讨论了一些重要的元标记，它们将帮助您的页面和标记在不同的设备上正确显示，并触发Internet Explorer中最新的HTML和JavaScript引擎。</p>
+<p>最后，我们在一个实际的完整HTML5示例中看到了前面提到的所有主题及其SCS。该示例是使用桌面优先的方法构建的；这将允许我们有条不紊地将我们的思维模式转换为移动优先技术。</p>
+<p>下一章将是关于<em>揭开</em>的神秘面纱，何时以及如何使用移动优先和/或桌面优先的方法，以及如何使用每种方法。拿出你的水晶球！</p>
+
+</body>
+</html>
