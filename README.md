@@ -33,6 +33,18 @@
 +   [通过创建有趣的游戏学习 HTML5](docs/learn-h5-create-fun-game/SUMMARY.md)
 +   [Ionic 学习手册](docs/learn-ionic/SUMMARY.md)
 +   [LESS Web 开发基础知识](docs/less-web-dev-essense/SUMMARY.md)
++   [HTML5 WebSocket 编程入门指南](docs/get-start-h5-ws-prog/SUMMARY.md)
++   [HTML5 数据服务秘籍](docs/h5-data-svc-cb/SUMMARY.md)
++   [面向 Flash 开发者的 HTML5](docs/h5-flash-dev/SUMMARY.md)
++   [HTML5 iPhone Web 应用开发](docs/h5-iphone-web-app-dev/SUMMARY.md)
++   [HTML5 多媒体开发秘籍](docs/h5-multimedia-dev-cb/SUMMARY.md)
++   [HTML5 视频操作手册](docs/h5-video-howto/SUMMARY.md)
++   [HTML5 和 CSS3 迁移即时入门](docs/ins-migrant-h5c3-howto/SUMMARY.md)
++   [精通 CSS](docs/master-css/SUMMARY.md)
++   [精通 HTML5 表单](docs/master-h5-form/SUMMARY.md)
++   [HTML5 和 CSS3 移动优先设计](docs/mobi-first-design-h5c3/SUMMARY.md)
++   [HTML5 多人游戏开发](docs/multiplayer-game-dev-h5/SUMMARY.md)
++   [CSS3 专家级编程](docs/prof-c3/SUMMARY.md)
 
 ## 贡献指南
 
