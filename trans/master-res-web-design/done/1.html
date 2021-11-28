@@ -81,7 +81,7 @@
 <p>按<em>窗口</em>+<em>R</em>，输入<code class="literal">CMD</code>，然后按<em>进入</em>。</p>
 
 
-<p><img src="graphics/B02102_01_01.jpg" alt="Opening the command line"/></p>
+<p><img src="img/B02102_01_01.jpg" alt="Opening the command line"/></p>
 
 <h3 class="title" id="sigil_toc_id_24"><a id="ch01lvl3sec03"/>安装Sass gem</h3>
 
@@ -96,7 +96,7 @@
 <pre class="programlisting"><strong>sudo gem install sass</strong>
 </pre>
 
-<p><img src="graphics/B02102_01_02.jpg" alt="Installing the Sass gem"/></p>
+<p><img src="img/B02102_01_02.jpg" alt="Installing the Sass gem"/></p>
 <p>安装Sass需要几秒钟的时间。</p>
 <h3 class="title" id="sigil_toc_id_25"><a id="tip05"/>提示</h3>
 <p>在撰写本文时，Sass的最新版本是3.4.14。该书出版时，版本/修订版可能会有所不同。</p>
@@ -112,20 +112,20 @@
 <p>我将要向你们展示的与任何其他Sass教程告诉你们的完全不同。这些教程中的大多数都让事情变得太复杂了。这是你读过的最简单的使用Sass的方法。</p>
 <p>下面的屏幕截图在Windows上，但无论平台如何，都可以应用完全相同的过程。</p>
 <p>在以下步骤中，您将看到创建必要文件夹和文件后的外观示例，而不是如何创建它们的示例：</p>
-<ol class="orderedlist arabic"><li class="listitem">Create a <code class="literal">/Demo</code> folder anywhere on your drive:<p><img src="graphics/B02102_01_04.jpg" alt="Using Sass"/></p></li>
-<li class="listitem">Inside<a id="id9" class="indexterm"/> that folder, create two subfolders, <code class="literal">/css</code> and <code class="literal">/scss</code>:<p><img src="graphics/B02102_01_05.jpg" alt="Using Sass"/></p></li>
-<li class="listitem">Create a <code class="literal">.scss</code> file. Go into the <code class="literal">/scss</code> folder and create a file called <code class="literal">styles.scss</code>:<p><img src="graphics/B02102_01_06.jpg" alt="Using Sass"/></p><h3 class="title" id="sigil_toc_id_27"><a id="tip06"/>提示</h3>
+<ol class="orderedlist arabic"><li class="listitem">Create a <code class="literal">/Demo</code> folder anywhere on your drive:<p><img src="img/B02102_01_04.jpg" alt="Using Sass"/></p></li>
+<li class="listitem">Inside<a id="id9" class="indexterm"/> that folder, create two subfolders, <code class="literal">/css</code> and <code class="literal">/scss</code>:<p><img src="img/B02102_01_05.jpg" alt="Using Sass"/></p></li>
+<li class="listitem">Create a <code class="literal">.scss</code> file. Go into the <code class="literal">/scss</code> folder and create a file called <code class="literal">styles.scss</code>:<p><img src="img/B02102_01_06.jpg" alt="Using Sass"/></p><h3 class="title" id="sigil_toc_id_27"><a id="tip06"/>提示</h3>
 <p>注意<a id="id10" class="indexterm"/>文件扩展名<code class="literal">.scss</code>？这是你的Sass文件。是的，现在里面什么都没有，是空的。</p>
 
 </li>
 <li class="listitem">Go back to the command line for a minute and follow these steps:<ol class="orderedlist arabic"><li class="listitem">在命令行中，键入<code class="literal">cd &lt;space&gt;</code></li>
-<li class="listitem">A space after <code class="literal">cd</code> means <em>Change Directory</em>. From your file manager, drag and drop the <code class="literal">/Demo</code> folder into the command prompt/terminal window and press <em>Enter</em>.<p><img src="graphics/B02102_01_06a.jpg" alt="Using Sass"/></p></li>
+<li class="listitem">A space after <code class="literal">cd</code> means <em>Change Directory</em>. From your file manager, drag and drop the <code class="literal">/Demo</code> folder into the command prompt/terminal window and press <em>Enter</em>.<p><img src="img/B02102_01_06a.jpg" alt="Using Sass"/></p></li>
 <li class="listitem">您<a id="id11" class="indexterm"/>现在应该在<code class="literal">/Demo</code>文件夹中。</li>
 </ol>
-<p><img src="graphics/B02102_01_07.jpg" alt="Using Sass"/></p></li>
+<p><img src="img/B02102_01_07.jpg" alt="Using Sass"/></p></li>
 <li class="listitem">在命令行<pre class="programlisting"><strong>sass --watch scss:css­</strong>
 </pre>中键入以下命令，使Sass<em>监视</em>您的<code class="literal">/scss</code>和<code class="literal">/css</code>文件夹</li>
-<li class="listitem">Make Sass watch the <code class="literal">/scss</code> and <code class="literal">/css</code> folders.<p><img src="graphics/B02102_01_08.jpg" alt="Using Sass"/></p><p>就这样！您现在正在使用Sass！</p><h3 class="title" id="sigil_toc_id_28"><a id="tip07"/>提示</h3>
+<li class="listitem">Make Sass watch the <code class="literal">/scss</code> and <code class="literal">/css</code> folders.<p><img src="img/B02102_01_08.jpg" alt="Using Sass"/></p><p>就这样！您现在正在使用Sass！</p><h3 class="title" id="sigil_toc_id_28"><a id="tip07"/>提示</h3>
 <p><code class="literal">--watch</code>标志告诉Sass注意<code class="literal">/scss</code>和<code class="literal">/css</code>文件夹，这样当<a id="id12" class="indexterm"/>我们对<code class="literal">.scss</code>文件（在我们的例子中为<code class="literal">styles.scss</code>文件）进行更改时，Sass将检测到更改并将SCS编译为我们将在网站或应用程序中使用的最终CSS文件。</p>
 
 </li>
@@ -136,7 +136,7 @@
 <li class="listitem">从命令行/终端验证编译是否成功。</li>
 <li class="listitem">打开你的<code class="literal">styles.css</code>文件，享受你的新创作。</li>
 </ol>
-<p><img src="graphics/B02102_01_09.jpg" alt="Using Sass"/></p></li>
+<p><img src="img/B02102_01_09.jpg" alt="Using Sass"/></p></li>
 </ol>
 
 
@@ -975,17 +975,17 @@ autoprefixer *.css</pre>
 <p>您可以<a id="id81" class="indexterm"/>从<a class="ulink" href="https://prepros.io/">下载https://prepros.io/ </a>。Prepos是一种付费应用程序。然而，花29美元并不会让银行破产。我向您保证，在第一次编译之后，这个应用程序将自行付费。</p>
 <p>还有一种方法可以免费使用Prepos并享受应用程序的所有功能。然而，这是以每5分钟关闭<em>购买应用程序</em>弹出窗口为代价的。</p>
 <p>这是Prepos当前的欢迎屏幕（现在可能已更改）：</p>
-<p><img src="graphics/B02102_01_10.jpg" alt="The Prepros app"/></p>
+<p><img src="img/B02102_01_10.jpg" alt="The Prepros app"/></p>
 <p>还记得<a id="id82" class="indexterm"/>安装Sass的步骤吗？我们在其中创建了一个<code class="literal">/Demo</code>文件夹并创建了两个子文件夹<code class="literal">/scss</code>和<code class="literal">/css</code>？我们将把<code class="literal">/Demo</code>文件夹拖放到Prepos界面上：</p>
-<p><img src="graphics/B02102_01_11.jpg" alt="The Prepros app"/></p>
+<p><img src="img/B02102_01_11.jpg" alt="The Prepros app"/></p>
 <p>一张悲伤的脸出现了，让我们知道这个项目是空的。这是真的，因为我们没有向<code class="literal">/scss</code>文件夹添加任何文件：</p>
-<p><img src="graphics/B02102_01_12.jpg" alt="The Prepros app"/></p>
+<p><img src="img/B02102_01_12.jpg" alt="The Prepros app"/></p>
 <p>那么，让我们<a id="id84" class="indexterm"/>创建一个。<code class="literal">/scss</code>文件夹中的<code class="literal">scss</code>文件：</p>
-<p><img src="graphics/B02102_01_13.jpg" alt="The Prepros app"/></p>
+<p><img src="img/B02102_01_13.jpg" alt="The Prepros app"/></p>
 <p>prepos<a id="id85" class="indexterm"/>会自动检测新的<code class="literal">styles.scss</code>文件并编译生成<code class="literal">styles.css</code>文件，保存在<code class="literal">/css</code>文件夹中。</p>
-<p><img src="graphics/B02102_01_14.jpg" alt="The Prepros app"/></p>
+<p><img src="img/B02102_01_14.jpg" alt="The Prepros app"/></p>
 <p>点击<code class="literal">styles.scss</code>文件上的<a id="id86" class="indexterm"/>按钮将显示该文件的默认设置：</p>
-<p><img src="graphics/B02102_01_15.jpg" alt="The Prepros app"/></p>
+<p><img src="img/B02102_01_15.jpg" alt="The Prepros app"/></p>
 <p>让我们修改<a id="id87" class="indexterm"/>其中的一些设置，以便Prepos可以自动执行以下操作：</p>
 <ul class="itemizedlist"><li class="listitem" style="list-style-type: disc">添加供应商前缀。</li>
 <li class="listitem" style="list-style-type: disc">创建源地图。</li>
@@ -997,7 +997,7 @@ autoprefixer *.css</pre>
 
 
 <p>在<strong>输出样式</strong>部分，我们将把设置保留为<strong>扩展</strong>。</p>
-<p><img src="graphics/B02102_01_16.jpg" alt="The Prepros app"/></p>
+<p><img src="img/B02102_01_16.jpg" alt="The Prepros app"/></p>
 <p>四种输出风格之间的<a id="id88" class="indexterm"/>差异很简单：</p>
 <h4 class="title" id="sigil_toc_id_71"><a id="ch01lvl4sec08"/>扩大产量</h4>
 
@@ -1056,14 +1056,14 @@ header .logo { float: left; }
 
 <p>每次<a id="id93" class="indexterm"/>点击<strong>保存</strong>时，预印本将在屏幕右下角显示以下任一对话框。</p>
 <p><strong>成功</strong>将为我们提供以下输出：</p>
-<p><img src="graphics/B02102_01_17.jpg" alt="Add some CSS and let the Prepros app do the rest!"/></p>
+<p><img src="img/B02102_01_17.jpg" alt="Add some CSS and let the Prepros app do the rest!"/></p>
 <p><strong>错误</strong>将给我们以下输出：</p>
-<p><img src="graphics/B02102_01_18.jpg" alt="Add some CSS and let the Prepros app do the rest!"/></p>
+<p><img src="img/B02102_01_18.jpg" alt="Add some CSS and let the Prepros app do the rest!"/></p>
 <p>让我们以<a id="id94" class="indexterm"/>我们的<code class="literal">styles.scss</code>文件为例，添加一个简单的CSS规则，它需要一些供应商前缀。</p>
-<p><img src="graphics/B02102_01_19.jpg" alt="Add some CSS and let the Prepros app do the rest!"/></p>
+<p><img src="img/B02102_01_19.jpg" alt="Add some CSS and let the Prepros app do the rest!"/></p>
 <p>当我们保存<code class="literal">styles.scss</code>文件时，Prepos会显示绿色/成功对话框，并将我们的SCSS文件编译为<code class="literal">styles.css</code>。</p>
 <p>这是编译文件的外观，所有前缀都自动添加：</p>
-<p><img src="graphics/B02102_01_20.jpg" alt="Add some CSS and let the Prepros app do the rest!"/></p>
+<p><img src="img/B02102_01_20.jpg" alt="Add some CSS and let the Prepros app do the rest!"/></p>
 
 <h4 class="title" id="sigil_toc_id_76"><a id="ch01lvl4sec13"/>定义要支持多少传统浏览器版本作为前缀</h4>
 
@@ -1071,11 +1071,11 @@ header .logo { float: left; }
 
 <p>随着浏览器的发展，CSS3属性和值被标准化，其中较少的属性和值需要<a id="id95" class="indexterm"/>供应商前缀。我们的CSS文件应该反映这一点，这样我们就不会用不必要的前缀填充样式表。</p>
 <p>Prepos允许我们定义在应用前缀时要支持多少传统浏览器版本。步骤如下：</p>
-<ol class="orderedlist arabic"><li class="listitem">Click on the <strong>MORE OPTIONS</strong> menu at the top:<p><img src="graphics/B02102_01_21.jpg" alt="Defining how many legacy browser versions to support for prefixing"/></p></li>
-<li class="listitem">Click on <strong>Project Options</strong> from the drop-down menu:<p><img src="graphics/B02102_01_22.jpg" alt="Defining how many legacy browser versions to support for prefixing"/></p></li>
-<li class="listitem">Click <a id="id96" class="indexterm"/>on the <strong>CSS</strong> menu option:<p><img src="graphics/B02102_01_23.jpg" alt="Defining how many legacy browser versions to support for prefixing"/></p></li>
-<li class="listitem">Scroll <a id="id97" class="indexterm"/>all the way to the bottom and type the number <code class="literal">2</code> in the <strong>AutoPrefixer</strong> field:<p><img src="graphics/B02102_01_24.jpg" alt="Defining how many legacy browser versions to support for prefixing"/></p></li>
-<li class="listitem">Once this<a id="id98" class="indexterm"/> is done, save the <code class="literal">styles.scss</code> file. We'll see that the CSS3 linear gradient property doesn't really need to be prefixed after Prepros compiles the CSS file:<p><img src="graphics/B02102_01_25.jpg" alt="Defining how many legacy browser versions to support for prefixing"/></p></li>
+<ol class="orderedlist arabic"><li class="listitem">Click on the <strong>MORE OPTIONS</strong> menu at the top:<p><img src="img/B02102_01_21.jpg" alt="Defining how many legacy browser versions to support for prefixing"/></p></li>
+<li class="listitem">Click on <strong>Project Options</strong> from the drop-down menu:<p><img src="img/B02102_01_22.jpg" alt="Defining how many legacy browser versions to support for prefixing"/></p></li>
+<li class="listitem">Click <a id="id96" class="indexterm"/>on the <strong>CSS</strong> menu option:<p><img src="img/B02102_01_23.jpg" alt="Defining how many legacy browser versions to support for prefixing"/></p></li>
+<li class="listitem">Scroll <a id="id97" class="indexterm"/>all the way to the bottom and type the number <code class="literal">2</code> in the <strong>AutoPrefixer</strong> field:<p><img src="img/B02102_01_24.jpg" alt="Defining how many legacy browser versions to support for prefixing"/></p></li>
+<li class="listitem">Once this<a id="id98" class="indexterm"/> is done, save the <code class="literal">styles.scss</code> file. We'll see that the CSS3 linear gradient property doesn't really need to be prefixed after Prepros compiles the CSS file:<p><img src="img/B02102_01_25.jpg" alt="Defining how many legacy browser versions to support for prefixing"/></p></li>
 </ol>
 
 <h3 class="title" id="sigil_toc_id_77"><a id="tip23"/>提示</h3>

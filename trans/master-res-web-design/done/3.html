@@ -434,7 +434,7 @@ article { background: red;
 
 
 <p>您在这里看到的<a id="id224" class="indexterm"/>图形与12列980GS布局成比例。浏览器窗口为1024像素宽，页面为980像素宽：</p>
-<p><img src="graphics/B02102_03_01.jpg" alt="The base page"/></p>
+<p><img src="img/B02102_03_01.jpg" alt="The base page"/></p>
 <h3 class="title" id="sigil_toc_id_140"><a id="tip33"/>提示</h3>
 <p>我们主要的<a id="id225" class="indexterm"/>灰色容器，宽980px，左右两侧已经有10px的填充物。这意味着内部的部分<a id="id226" class="indexterm"/>总是需要加起来达到<strong>960px</strong>。</p>
 
@@ -628,7 +628,7 @@ article { background: red;
 }</pre>
 
 <p>诚然，从980px到768px，很难看出书中的差异，但相信我，下面的<a id="id235" class="indexterm"/>截图完全代表了980px宽的浏览器窗口和768px宽的页面：</p>
-<p><img src="graphics/B02102_03_02.jpg" alt="980px to 768px (AWD)"/></p>
+<p><img src="img/B02102_03_02.jpg" alt="980px to 768px (AWD)"/></p>
 <p>正如你所看到的，当屏幕是980px时，我们的主容器（<code class="literal">.container_12</code>的宽度从980px变为768px。我们的主容器左右各有10px的填充物，所以所有其他部分的宽度加起来应该与748px相匹配。</p>
 <p>让我们看一看。</p>
 <p>我们使用同一类<code class="literal">.grid_12</code>的<strong>页眉</strong>和<strong>页脚</strong>现在宽728px。所以如果我们加上：<em>728px+10px左边距+10px右边距=748px</em>。</p>
@@ -679,7 +679,7 @@ article { background: red;
 }</pre>
 
 <p>好的，这个<a id="id238" class="indexterm"/>布局现在是一个单列页面。我们开始看到一些结果。美好的</p>
-<p><img src="graphics/B02102_03_03.jpg" alt="768px to 640px (AWD)"/></p>
+<p><img src="img/B02102_03_03.jpg" alt="768px to 640px (AWD)"/></p>
 <p>同样，请记住，我们的主容器左右各有10px的填充，因此所有其他部分的宽度加起来应该与620px匹配。</p>
 <p>让我们确保我们的数字相加：</p>
 <p>我们使用同一类<code class="literal">.grid_12</code>的<strong>页眉</strong>和<strong>页脚</strong>现在宽600像素。所以如果我们加上：<em>600px+10px左边距+10px右边距=620px</em>。</p>
@@ -740,7 +740,7 @@ article { background: red;
 }</pre>
 
 <p>我们正在取得一些当之无愧的进步！此处，浏览器窗口为640px宽，页面为480px宽：</p>
-<p><img src="graphics/B02102_03_04.jpg" alt="640px to 480px (AWD)"/></p>
+<p><img src="img/B02102_03_04.jpg" alt="640px to 480px (AWD)"/></p>
 <p>记住<a id="id242" class="indexterm"/>我们的主容器左右各有10px的填充物，因此所有其他部分的宽度加起来应该与460px匹配。</p>
 <p>现在，我们将从2列布局更改为1列布局。这意味着所有部分现在都具有完全相同的宽度。</p>
 <p>这也意味着在我们的SCSS文件中，我们可以为所有三类创建一个媒体块：</p>
@@ -813,7 +813,7 @@ article { background: red;
 }</pre>
 
 <p>好了，我们走！在此屏幕截图中，浏览器窗口为320px宽，内容也为320px宽，非常适合：</p>
-<p><img src="graphics/B02102_03_05.jpg" alt="480px to 320px (AWD)"/></p>
+<p><img src="img/B02102_03_05.jpg" alt="480px to 320px (AWD)"/></p>
 <p>我们<a id="id246" class="indexterm"/>已经知道我们的主容器左右各有10px的填充物。在本例中，我们将删除该填充以获得这20个像素，因为我们的屏幕空间现在非常小：</p>
 <pre class="programlisting">@include forSmallScreens(480px) {
     width: 320px;
@@ -1092,7 +1092,7 @@ article { background: red;
 
 <p>现在，我们<a id="id258" class="indexterm"/>有一个1024px宽的浏览器窗口，一个980px宽的布局，所有列都有相应的百分比值。实际上，如果不查看代码以直观地告诉固定宽度和基于百分比的布局之间的差异，这几乎是不可能的。</p>
 <p>我们在这里做得很好！</p>
-<p><img src="graphics/B02102_03_01.jpg" alt="The Content section"/></p>
+<p><img src="img/B02102_03_01.jpg" alt="The Content section"/></p>
 <p>让乐趣开始吧。让我们添加第一个媒体查询。</p>
 <h3 class="title" id="sigil_toc_id_158"><a id="ch03lvl3sec31"/>980px至768px（后轮驱动）</h3>
 
@@ -1127,7 +1127,7 @@ article { background: red;
 
 <p>由于<a id="id261" class="indexterm"/>的<strong>页眉</strong>、<strong>页脚</strong>、<strong>导航</strong>和<strong>内容</strong>部分的宽度、填充和边距现在都是按百分比设置的，我们不必为它们声明任何媒体查询，至少现在还没有，因为布局没有改变。</p>
 <p>当我们调整浏览器窗口的大小时，<strong>页眉</strong>、<strong>页脚</strong>、<strong>导航</strong>和<strong>内容</strong>部分会自动响应、按比例收缩、正确捕捉，并适应主容器<code class="literal">.container_12</code>的新宽度，而不会破坏布局。这显示在以下屏幕截图中：</p>
-<p><img src="graphics/B02102_03_02.jpg" alt="980px to 768px (RWD)"/></p>
+<p><img src="img/B02102_03_02.jpg" alt="980px to 768px (RWD)"/></p>
 <p>这太棒了！</p>
 <p>让我们添加另一个断点。</p>
 
@@ -1172,7 +1172,7 @@ article { background: red;
 }</pre>
 
 <p>好的，我们<a id="id264" class="indexterm"/>现在有一个单列布局。不错，不错！</p>
-<p><img src="graphics/B02102_03_03.jpg" alt="768px to 640px (RWD)"/></p>
+<p><img src="img/B02102_03_03.jpg" alt="768px to 640px (RWD)"/></p>
 
 <h3 class="title" id="sigil_toc_id_160"><a id="ch03lvl3sec33"/>640px至480px（后轮驱动）</h3>
 
@@ -1221,7 +1221,7 @@ article { background: red;
 }</pre>
 
 <p>我们的<a id="id266" class="indexterm"/>布局越来越窄，我们所需要做的就是添加一个新的媒体查询，就是这样！不需要和其他容器混在一起；它们完全适应我们定义的任何宽度。</p>
-<p><img src="graphics/B02102_03_04.jpg" alt="640px to 480px (RWD)"/></p>
+<p><img src="img/B02102_03_04.jpg" alt="640px to 480px (RWD)"/></p>
 
 <h3 class="title" id="sigil_toc_id_161"><a id="ch03lvl3sec34"/>480px至320px（后轮驱动）</h3>
 
@@ -1272,7 +1272,7 @@ article { background: red;
 }</pre>
 
 <p>再一次<a id="id268" class="indexterm"/>我们不需要在<strong>页眉</strong>、<strong>页脚</strong>、<strong>导航</strong>和<strong>内容</strong>部分添加任何内容，因为它们现在都有97.91%的宽度。这使他们反应灵敏，我们不必担心其他任何事情。</p>
-<p><img src="graphics/B02102_03_05.jpg" alt="480px to 320px (RWD)"/></p>
+<p><img src="img/B02102_03_05.jpg" alt="480px to 320px (RWD)"/></p>
 <p>结合所有断点和宽度的<a id="id269" class="indexterm"/>最终SCS如下所示：</p>
 <pre class="programlisting">.container_12 {
     width: 980px;

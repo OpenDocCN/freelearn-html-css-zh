@@ -127,7 +127,7 @@
 
 <p>如果您<a id="id559" class="indexterm"/>点击<strong>表</strong>视图，所有文本都将消失，我们将看到一个字体大小列表，范围从可笑的小值到同样可笑的大值。不过没关系。这就是模块化秤的威力。</p>
 <p>这就是我们看到的：</p>
-<p><img src="graphics/B02102_07_01.jpg" alt="Using the Modular Scale for typography"/></p>
+<p><img src="img/B02102_07_01.jpg" alt="Using the Modular Scale for typography"/></p>
 <p>如上图所示，共有三列：</p>
 <ul class="itemizedlist"><li class="listitem" style="list-style-type: disc">第一列以像素为单位显示字体大小。</li>
 <li class="listitem" style="list-style-type: disc">第二列显示ems中的字体大小。</li>
@@ -195,9 +195,9 @@ h3 {
 }</pre>
 
 <p>在小屏幕（510px宽）上，模块化比例如下所示：</p>
-<p><img src="graphics/B02102_07_02.jpg" alt="Using the Modular Scale for typography"/></p>
+<p><img src="img/B02102_07_02.jpg" alt="Using the Modular Scale for typography"/></p>
 <p>而<a id="id562" class="indexterm"/>在大屏幕（850px宽）上也是如此：</p>
-<p><img src="graphics/B02102_07_03.jpg" alt="Using the Modular Scale for typography"/></p>
+<p><img src="img/B02102_07_03.jpg" alt="Using the Modular Scale for typography"/></p>
 <p>这里唯一的潜在问题是我之前提到的关于使用ems的问题：跟踪父元素的字体大小可能会变成字体管理的噩梦。</p>
 <p>使用像素是不可能的，因为它在传统浏览器中存在可伸缩性问题。然而，使用rems可以使事情保持在“相对字体大小”的范围内，同时提供基于像素的思维方式，但不存在可伸缩性问题。这使我们能够支持不支持rems的传统浏览器。</p>
 <p>下面是我在CodePen中为此创建的一个<a id="id564" class="indexterm"/>演示：</p>
@@ -275,9 +275,9 @@ p {
 }</pre>
 
 <p>这<a id="id567" class="indexterm"/>是在小屏幕（510px宽）上使用rems到像素混合的模块化比例：</p>
-<p><img src="graphics/B02102_07_04.jpg" alt="The rems-to-pixels Sass mixin"/></p>
+<p><img src="img/B02102_07_04.jpg" alt="The rems-to-pixels Sass mixin"/></p>
 <p>这是<a id="id568" class="indexterm"/>在大屏幕（850px宽）上的样子：</p>
-<p><img src="graphics/B02102_07_05.jpg" alt="The rems-to-pixels Sass mixin"/></p>
+<p><img src="img/B02102_07_05.jpg" alt="The rems-to-pixels Sass mixin"/></p>
 <p>下面是我在CodePen中为此创建的一个<a id="id569" class="indexterm"/>演示：</p>
 <p>T0http://codepen.io/ricardozea/pen/8a95403db5b73c995443720475fdd900 T1</p>
 <p>我们刚才看到的示例使用的是系统字体Arial。让我们继续用一些网页字体来修饰这些例子，让它们更具<em>字符</em>。</p>

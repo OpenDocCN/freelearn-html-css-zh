@@ -64,7 +64,7 @@
 
 
 <p>在他的<a id="id355" class="indexterm"/>文章中，Luke谈到了大多数用户手持智能手机、平板电脑和触摸型笔记本电脑时的姿势模式：</p>
-<p><img src="graphics/B02102_05_01.jpg" alt="The posture patterns"/></p>
+<p><img src="img/B02102_05_01.jpg" alt="The posture patterns"/></p>
 <p>这些<a id="id356" class="indexterm"/>模式允许我们定义布局内容的最佳方式，以便易于使用和访问。</p>
 <p>了解用户的姿势模式将使我们能够了解目标的大小是否合适，如果屏幕空间不够大，目标的大小甚至可以小一点，如果需要精度，目标的大小可以大一点，因为使用拇指和食指是不同的。</p>
 
@@ -74,7 +74,7 @@
 
 <p>Luke<a id="id357" class="indexterm"/>还谈到了<em>触摸区</em>，这基本上是一个设备的区域，根据姿势的不同，这些区域容易或难以触及。</p>
 <p>在所有主要类型的设备、智能手机、平板电脑和支持触摸的笔记本电脑中，理想的触摸区域为深绿色，<em>ok</em>触摸区域为浅绿色，难以触及的区域为黄色：</p>
-<p><img src="graphics/B02102_05_02.jpg" alt="The touch zones"/></p>
+<p><img src="img/B02102_05_02.jpg" alt="The touch zones"/></p>
 <p>在RWD中，要彻底改变一个页面的布局是有点困难的，更不用说像一个独立的应用程序那样改变多个页面（至少目前如此），而不需要做大量的工作。此外，很可能会对用户体验和维护内容层次结构产生负面影响。</p>
 <p>RWD<a id="id359" class="indexterm"/>与内容策略紧密结合，因此无论在何种设备上查看我们的网站/应用程序，都需要保留内容层次结构。我们需要确保元素本身足够大，以便手指较大的人能够正确使用。这些元素包括链接、按钮、表单字段、导航项、任何类型的控件（如分页）、手风琴中的打开/折叠控件、选项卡系统等。</p>
 <p>现在，有一个网站/应用程序元素在RWD中非常通用：菜单按钮。</p>
@@ -147,7 +147,7 @@
 }</pre>
 
 <p>结果是：</p>
-<p><img src="graphics/B02102_05_03.jpg" alt="The hamburger icon"/></p>
+<p><img src="img/B02102_05_03.jpg" alt="The hamburger icon"/></p>
 <h3 class="title" id="sigil_toc_id_212"><a id="tip51"/>提示</h3>
 <p>出于可访问性原因，<a id="id367" class="indexterm"/>单词<em>菜单</em>应始终包含在标记<a id="id368" class="indexterm"/>中。当使用<strong>辅助技术</strong>（<strong>处）的用户将注意力集中在汉堡包图标上时，屏幕阅读器将读取单词<em>菜单</em>。此外，将单词<em>菜单</em>包含在<code class="literal">&lt;span&gt;</code>标记中，可以在不影响链接可访问性的情况下隐藏该单词，使其不会显示在浏览器中。</strong></p>
 
@@ -190,7 +190,7 @@
 }</pre>
 
 <p>这就是结果：</p>
-<p><img src="graphics/B02102_05_04.jpg" alt="The word Menu"/></p>
+<p><img src="img/B02102_05_04.jpg" alt="The word Menu"/></p>
 <h3 class="title" id="sigil_toc_id_214"><a id="tip52"/>提示</h3>
 <p>在本例中，我使用类名<code class="literal">.word-menu</code>来明确表示我对本书的意图，但这不是为生产命名元素的正确方法。使用更有意义和通用的命名约定，例如，类似于<code class="literal">.menu-trigger</code>的东西可以作为替代。使用泛型类名将允许我们在不更改标记的情况下使用导航图标的任何设计。</p>
 
@@ -239,7 +239,7 @@
 }</pre>
 
 <p>结果如下：</p>
-<p><img src="graphics/B02102_05_05.jpg" alt="The hamburger icon plus the word Menu"/></p>
+<p><img src="img/B02102_05_05.jpg" alt="The hamburger icon plus the word Menu"/></p>
 <h3 class="title" id="sigil_toc_id_216"><a id="tip53"/>提示</h3>
 <p>注意“<code class="literal">≡</code>”后面的空格，这就是将图标与单词“Menu”分开的原因，而不必使用任何形式的边距。</p>
 
@@ -273,7 +273,7 @@
 }</pre>
 
 <p>结果如下：</p>
-<p><img src="graphics/B02102_05_06.jpg" alt="The hamburger icon plus the word Menu"/></p>
+<p><img src="img/B02102_05_06.jpg" alt="The hamburger icon plus the word Menu"/></p>
 <p>你可以<a id="id379" class="indexterm"/>在<a class="ulink" href="http://codepen.io/ricardozea/pen/f4ddc6443bc060004b58a7301aae83db">看到我在CodePen中创建的演示http://codepen.io/ricardozea/pen/f4ddc6443bc060004b58a7301aae83db </a>。</p>
 
 
@@ -504,11 +504,11 @@ p { line-height: 1.5; }</pre>
 
 <p>让我们看一下屏幕截图。</p>
 <p>以下是在<em>折叠</em>状态下的小屏幕上的外观：</p>
-<p><img src="graphics/B02102_05_07.jpg" alt="The Off-Canvas or Off-Screen navigation"/></p>
+<p><img src="img/B02102_05_07.jpg" alt="The Off-Canvas or Off-Screen navigation"/></p>
 <p>以下是<a id="id395" class="indexterm"/>在<em>扩展</em>状态下的<a id="id396" class="indexterm"/>外观：</p>
-<p><img src="graphics/B02102_05_08.jpg" alt="The Off-Canvas or Off-Screen navigation"/></p>
+<p><img src="img/B02102_05_08.jpg" alt="The Off-Canvas or Off-Screen navigation"/></p>
 <p>这是它在大屏幕上的外观：</p>
-<p><img src="graphics/B02102_05_09.jpg" alt="The Off-Canvas or Off-Screen navigation"/></p>
+<p><img src="img/B02102_05_09.jpg" alt="The Off-Canvas or Off-Screen navigation"/></p>
 <p>您<a id="id397" class="indexterm"/>可以在<a class="ulink" href="http://codepen.io/ricardozea/pen/fd504cbcf362069320d15a4ea8a88b27">看到我在<a id="id399" class="indexterm"/>代码笔中创建的<a id="id398" class="indexterm"/>演示http://codepen.io/ricardozea/pen/fd504cbcf362069320d15a4ea8a88b27 </a>。</p>
 
 <h2 class="title" id="sigil_toc_id_222"><a id="ch05lvl2sec62"/>切换导航</h2>
@@ -671,11 +671,11 @@ h1 { margin: 0; }</pre>
 
 <p>让我们看一下屏幕截图。</p>
 <p>以下是在<em>折叠</em>状态下的小屏幕上的外观：</p>
-<p><img src="graphics/B02102_05_10.jpg" alt="The Toggle navigation"/></p>
+<p><img src="img/B02102_05_10.jpg" alt="The Toggle navigation"/></p>
 <p>而<a id="id402" class="indexterm"/>这里是<em>扩展</em>状态：</p>
-<p><img src="graphics/B02102_05_11.jpg" alt="The Toggle navigation"/></p>
+<p><img src="img/B02102_05_11.jpg" alt="The Toggle navigation"/></p>
 <p>以下是<a id="id403" class="indexterm"/>它在大屏幕上的样子：</p>
-<p><img src="graphics/B02102_05_12.jpg" alt="The Toggle navigation"/></p>
+<p><img src="img/B02102_05_12.jpg" alt="The Toggle navigation"/></p>
 <p>你<a id="id404" class="indexterm"/>可以在<a class="ulink" href="http://codepen.io/ricardozea/pen/e91a5e6ea456d41f4128d9bd405ccaa0">看到我在代码笔<a id="id405" class="indexterm"/>中创建的演示http://codepen.io/ricardozea/pen/e91a5e6ea456d41f4128d9bd405ccaa0 </a>。</p>
 <p>您<a id="id406" class="indexterm"/>也可以访问<a class="ulink" href="http://responsive-nav.com/">http://responsive-nav.com/ </a>用于切换导航功能。</p>
 
@@ -768,11 +768,11 @@ h1 { margin: 0; }</pre>
 
 <p>我们来看看截图。</p>
 <p>以下是它在小屏幕（320px）上的外观：</p>
-<p><img src="graphics/B02102_05_13.jpg" alt="The Flexbox-based navigation"/></p>
+<p><img src="img/B02102_05_13.jpg" alt="The Flexbox-based navigation"/></p>
 <p>以下是<a id="id410" class="indexterm"/>在小屏幕（426px）上的外观：</p>
-<p><img src="graphics/B02102_05_14.jpg" alt="The Flexbox-based navigation"/></p>
+<p><img src="img/B02102_05_14.jpg" alt="The Flexbox-based navigation"/></p>
 <p>以下是<a id="id411" class="indexterm"/>在大屏幕（980px）上的外观：</p>
-<p><img src="graphics/B02102_05_15.jpg" alt="The Flexbox-based navigation"/></p>
+<p><img src="img/B02102_05_15.jpg" alt="The Flexbox-based navigation"/></p>
 <p>您<a id="id412" class="indexterm"/>可以在<a class="ulink" href="http://codepen.io/ricardozea/pen/022b38c6c395368ec4befbf43737e398">看到我在CodePen中创建的演示http://codepen.io/ricardozea/pen/022b38c6c395368ec4befbf43737e398 </a>。</p>
 
 

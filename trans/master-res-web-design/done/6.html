@@ -23,7 +23,7 @@
 </ul>
 
 <p>下面是我们将在示例中使用的图像：</p>
-<p><img src="graphics/B02102_06_01.jpg" alt="Working with Images and Videos in Responsive Web Design"/></p>
+<p><img src="img/B02102_06_01.jpg" alt="Working with Images and Videos in Responsive Web Design"/></p>
 <p>这些令人敬畏的人物是来自中国少林寺的两位功夫大师。他们的名字是施德如和施德阳。</p>
 <h3 class="title" id="sigil_toc_id_225"><a id="note10"/>注</h3>
 <p><em>施德鲁和施德阳</em>由施德鲁（刘向阳饰）创作，他是少林寺正门照片真实性的唯一所有者和版权所有者。它通过<a id="id414" class="indexterm"/>维基百科获得CC BY-SA 3.0许可。可在<a class="ulink" href="http://en.wikipedia.org/wiki/Shaolin_Kung_Fu#/media/File:Shi_DeRu_and_Shi_DeYang.jpg">找到http://en.wikipedia.org/wiki/Shaolin_Kung_Fu#/media/File:Shi_DeRu_and_Shi_DeYang.jpg </a>。</p>
@@ -64,7 +64,7 @@
 <p>模糊<a id="id421" class="indexterm"/>背景本身其实相当有效，但<em>艺术方向</em>的观点也有另一个好处：它有助于吸引人们对图像重要部分的注意。</p>
 <p>模糊背景后，该文件现在重达185KB。这意味着文件大小从556KB减少了67%。我们开始有所进展了。</p>
 <p>以下是背景模糊的新图像：</p>
-<p><img src="graphics/B02102_06_02.jpg" alt="Blurring the background"/></p>
+<p><img src="img/B02102_06_02.jpg" alt="Blurring the background"/></p>
 <p>优化的巨大胜利！</p>
 
 <h2 class="title" id="sigil_toc_id_229"><a id="ch06lvl2sec66"/>使不太重要的区域变暗或变亮</h2>
@@ -75,7 +75,7 @@
 <p>我们试图通过使图像变暗或变亮来实现的基本目标是通过创建<em>纯色</em>区域来减少颜色的数量，或者至少尽可能地创建纯色区域。换句话说，我们正在降低对比度。谨慎使用这个技巧。</p>
 <p>以我们的功夫大师为例，将背景中不太重要的部分变暗后，图像现在重178KB。诚然，这与前一个过程没有太大区别（只有7KB的差异），但我们可以从图像中提取出任何千字节的<a id="id424" class="indexterm"/>，而不影响质量始终是一件好事，178KB的文件大小大约减少了68%。</p>
 <p>这是背景稍微变暗后图像的外观：</p>
-<p><img src="graphics/B02102_06_03.jpg" alt="Darkening or lightening the less important areas"/></p>
+<p><img src="img/B02102_06_03.jpg" alt="Darkening or lightening the less important areas"/></p>
 <p>每千字节计数。</p>
 
 <h2 class="title" id="sigil_toc_id_230"><a id="ch06lvl2sec67"/>优化图像</h2>
@@ -103,7 +103,7 @@
 
 
 <p>以下是556 KB图像和最终52 KB图像之间的前后（左）比较：</p>
-<p><img src="graphics/B02102_06_04.jpg" alt="Compressing the image"/></p>
+<p><img src="img/B02102_06_04.jpg" alt="Compressing the image"/></p>
 
 
 
@@ -130,7 +130,7 @@
 
 
 
-<p>首先让我说，RWD中的图像问题没有100%最优的<a id="id442" class="indexterm"/>解决方案。这是因为<a id="id443" class="indexterm"/>目前缺乏对推荐属性的支持，或者是因为存在双重资产下载。当然，Dave Newton在<a class="ulink" href="http://ww1.smashingmagzine.com/">中的文章http://ww1.smashingmagzine.com/ </a>、<em>如何避免在响应图像中重复下载</em>尝试解决此问题（<a class="ulink" href="http://www.smashingmagazine.com/2013/05/10/how-to-avoid-duplicate-downloads-in-responsive-images/">http://www.smashingmagazine.com/2013/05/10/how-to-avoid-duplicate-downloads-in-responsive-images/ </a>。</p>
+<p>首先让我说，RWD中的图像问题没有100%最优的<a id="id442" class="indexterm"/>解决方案。这是因为<a id="id443" class="indexterm"/>目前缺乏对推荐属性的支持，或者是因为存在双重资产下载。当然，Dave Newton在<a class="ulink" href="http://ww1.smashingmagzine.com/">中的文章http://ww1.smashingmagzine.com/ </a>、<em>如何避免在响应图像中重复下载</em>尝试解决此问题（<a class="ulink" href="http://www.smashingmagazine.com/2013/05/10/how-to-avoid-duplicate-downloads-in-responsive-img/">http://www.smashingmagazine.com/2013/05/10/how-to-avoid-duplicate-downloads-in-responsive-img/ </a>。</p>
 <p>然而，这个<a id="id444" class="indexterm"/>解决方案非常冗长。如果您必须处理许多图像，此解决方案可能不是最佳选择，并且允许双重下载开始变得更有意义。每个项目都是不同的，所以尽可能做出最明智的决策是非常重要的。</p>
 <p>一旦浏览器供应商决定完全支持这里提到的任何解决方案，就不必担心任何类型的双重下载或多重填充。</p>
 <p><code class="literal">&lt;picture&gt;</code>元素以及<code class="literal">srcset</code>和<code class="literal">sizes</code>属性由<strong>Responsive Images社区组</strong>（<strong>RICG</strong>）维护，现在是HTML规范的一部分。换句话说，我们可以不使用任何类型的polyfill来使用它们，并且相信现代浏览器将支持它们。嗯，至少在某种程度上。</p>
@@ -159,7 +159,7 @@
 <p>推荐的方法归结为这个概念：艺术指导。在响应图像中，艺术方向基本上意味着以某种方式裁剪不同的图像，以便忽略图像中不太重要的部分，以便聚焦重要的部分。</p>
 <p>这与仅调整同一图像的大小不同。诚然，您可以使用任何您想要的方法，但为了保持简单，当您想要为艺术导向的图像提供服务时，您可以使用<code class="literal">&lt;picture&gt;</code>元素，而当您只想为相同图像提供调整大小的版本时，可以使用<code class="literal">srcset</code>属性。</p>
 <p>在我们深入讨论标记之前，让我们看一个视觉示例，使用功夫大师的照片对比艺术指导图像和调整大小的图像：</p>
-<p><img src="graphics/B02102_06_05.jpg" alt="When to use &lt;picture&gt; and when to use srcset"/></p>
+<p><img src="img/B02102_06_05.jpg" alt="When to use &lt;picture&gt; and when to use srcset"/></p>
 <p>让我们看看这里发生了什么。原始图像在功夫大师周围有很大的空间<a id="id456" class="indexterm"/>：我们可以看到后面的树木和建筑物。调整大小的版本保持原始图像的所有方面和比例为1:1。</p>
 <p>然而，艺术导向的图像有很多不同之处。第一张由艺术指导的图像被裁剪成两位大师的特写镜头；第二幅由艺术指导的图像被裁剪得更加精细，以突出对施德如（左边的大师）的关注。我们本可以裁剪图像以聚焦施德阳（右边的大师），但这正是我想要给出图像的“艺术方向”。这是一个主观的决定，但基于坚实的意图。</p>
 <p>现在，让我们看看<em>Picturefill polyfill/脚本</em>的实际操作。</p>
@@ -190,21 +190,21 @@
 <p>当使用<code class="literal">&lt;picture&gt;</code>元素时，您（作者）告诉浏览器在<a id="id459" class="indexterm"/>哪个断点使用哪个图像。这样做的好处是，我们可以通过使用媒体查询精确地定义何时显示某个图像。媒体查询的工作原理与CSS中使用的媒体查询完全相同，甚至看起来也完全相同。</p>
 <p>这是一个基本的<code class="literal">&lt;picture&gt;</code>代码片段的样子：</p>
 <pre class="programlisting">&lt;picture&gt;
-    &lt;source srcset="images/grandmasters-small.jpg" media="(max-width: 40em)"&gt;
-    &lt;source srcset="images/grandmasters-medium.jpg" media="(max-width: 64em)"&gt;
-    &lt;source srcset="images/grandmasters-default.jpg"&gt;
-    &lt;img src="images/grandmasters-default.jpg" alt="Fallback image"&gt;
+    &lt;source srcset="img/grandmasters-small.jpg" media="(max-width: 40em)"&gt;
+    &lt;source srcset="img/grandmasters-medium.jpg" media="(max-width: 64em)"&gt;
+    &lt;source srcset="img/grandmasters-default.jpg"&gt;
+    &lt;img src="img/grandmasters-default.jpg" alt="Fallback image"&gt;
 &lt;/picture&gt;</pre>
 
 <p>现在，即使使用polyfill，IE9也存在<code class="literal">&lt;picture&gt;</code>元素的问题。听起来很奇怪，我们需要在条件注释中插入一个<code class="literal">&lt;video&gt;</code>标记，IE9才能正常工作。</p>
 <p>这是为IE9修改标记后的外观：</p>
 <pre class="programlisting">&lt;picture&gt;
 <strong>    &lt;!--[if IE 9]&gt;&lt;video style="display: none;"&gt;&lt;![endif]--&gt;</strong>
-    &lt;source srcset="images/grandmasters-small-ad.jpg" media="(max-width: 40em)"&gt;
-    &lt;source srcset="images/grandmasters-medium-ad.jpg" media="(max-width: 64em)"&gt;
-    &lt;source srcset="images/grandmasters-default.jpg"&gt;
+    &lt;source srcset="img/grandmasters-small-ad.jpg" media="(max-width: 40em)"&gt;
+    &lt;source srcset="img/grandmasters-medium-ad.jpg" media="(max-width: 64em)"&gt;
+    &lt;source srcset="img/grandmasters-default.jpg"&gt;
     <strong>&lt;!--[if IE 9]&gt;&lt;/video&gt;&lt;![endif]--&gt;</strong>
-    <strong>&lt;img src="images/grandmasters-default.jpg" alt="Fallback image"&gt;</strong>
+    <strong>&lt;img src="img/grandmasters-default.jpg" alt="Fallback image"&gt;</strong>
 &lt;/picture&gt;</pre>
 
 <p>如您所见，我还突出显示了<code class="literal">&lt;img src="grandmasters-default.jpg" alt="Fallback image"&gt;</code>标记。这是不支持<code class="literal">&lt;picture&gt;</code>元素的浏览器的回退映像。</p>
@@ -218,25 +218,25 @@
 <p><code class="literal">srcset</code>和<code class="literal">sizes</code>属性实际上来自<code class="literal">&lt;picture&gt;</code>规范，但在<code class="literal">&lt;img&gt;</code>元素中实现<a id="id462" class="indexterm"/>。当使用<code class="literal">srcset</code>和<code class="literal">sizes</code>属性时，浏览器会根据<a id="id463" class="indexterm"/>的具体情况决定使用哪个图像。如果您愿意，也可以使用媒体查询，尽管这不是必需的。单词<code class="literal">vw</code>表示<em>视口宽度</em>，用于让浏览器知道它应该以相对于视口宽度的一定百分比显示图像。如果您看到类似于<code class="literal">80vw</code>的内容，则表示图像应为当前视口宽度的80%。</p>
 <p><code class="literal">w</code>描述符表示<em>图像</em>的宽度。如果您看到类似于<code class="literal">255w</code>的内容，这意味着浏览器将了解特定图像的宽度为255px。</p>
 <p>让我们看一个带有Ty1 T1和Ty2 T2属性的Apple T0标签。</p>
-<pre class="programlisting">&lt;img src="images/grandmasters-default.jpg"
-     srcset="images/grandmasters-small-rsz.jpg 255w,
-             images/grandmasters-medium-rsz.jpg 511w"
+<pre class="programlisting">&lt;img src="img/grandmasters-default.jpg"
+     srcset="img/grandmasters-small-rsz.jpg 255w,
+             img/grandmasters-medium-rsz.jpg 511w"
      sizes="(min-width: 30em) 80vw, 100vw"
      alt="Mastering RWD with HTML5 and CSS3"&gt;</pre>
 
 <p>字母<code class="literal">rsz</code>是<em>和</em>的缩写。这是因为对于刚要在RWD中调整大小的图像，<code class="literal">srcset</code>属性使事情变得更简单。</p>
 <p>以下标记被截断，以便轻松地集中于特定的解释。</p>
 <p>我们首先看到的是已知的<code class="literal">src</code>属性，该属性充当后备映像：</p>
-<pre class="programlisting">&lt;img <strong>src="images/grandmasters-default.jpg"…</strong>
+<pre class="programlisting">&lt;img <strong>src="img/grandmasters-default.jpg"…</strong>
 </pre>
 
 <p>请记住，图像<code class="literal">grandmasters-default.jpg</code><em>不会被理解<code class="literal">srcset</code>的浏览器</em>使用。换句话说，支持<code class="literal">srcset</code>的浏览器中的<em>默认</em>图像将成为列表中的第一个图像。在我们的例子中，它是<code class="literal">grandmasters-small-rsz.jpg</code>。然后，我们看到了<code class="literal">srcset</code>属性。</p>
 <p>这就是魔法开始发生的地方：</p>
-<pre class="programlisting"><strong>srcset="images/grandmasters-small-rsz.jpg 255w,images/grandmasters-medium-rsz.jpg 511w"</strong>
+<pre class="programlisting"><strong>srcset="img/grandmasters-small-rsz.jpg 255w,img/grandmasters-medium-rsz.jpg 511w"</strong>
 </pre>
 
 <p>在本例中，我们的计划是在支持<code class="literal">srcset</code>的浏览器中显示两个不同的图像文件。这是通过列出用逗号分隔的图像来实现的。另外，每个图像后定义的<a id="id464" class="indexterm"/>值是图像的宽度：</p>
-<pre class="programlisting">images/grandmasters-small-rsz.jpg <strong>255w</strong>
+<pre class="programlisting">img/grandmasters-small-rsz.jpg <strong>255w</strong>
 </pre>
 
 <h3 class="title" id="sigil_toc_id_242"><a id="tip57"/>提示</h3>
@@ -272,8 +272,8 @@
 
 <p>高密度<a id="id466" class="indexterm"/>屏幕将永远是RWD世界中我们永远无法摆脱的东西。所以如果你不能打败他们，就加入他们。</p>
 <p>下面是一个介绍普通和高密度屏幕的片段：</p>
-<pre class="programlisting">&lt;img src="images/grandmasters-default.jpg"
-     srcset="images/grandmasters-small-rsz.jpg 1x,images/grandmasters-medium-rsz.jpg 2x"&gt;</pre>
+<pre class="programlisting">&lt;img src="img/grandmasters-default.jpg"
+     srcset="img/grandmasters-small-rsz.jpg 1x,img/grandmasters-medium-rsz.jpg 2x"&gt;</pre>
 
 <p>如您所见，这是一个非常简短的标记。这真的是不言自明的：如果没有<code class="literal">srcset</code>支持，请使用回退映像。如果有支持，则如果设备具有正常密度显示，则使用<code class="literal">1x</code>图像。如果设备的高密度显示器的密度高达密度的两倍，则必须使用<code class="literal">2x</code>图像。如果我们支持甚至高于2倍密度的设备，则应添加3倍后缀。</p>
 <p><code class="literal">sizes</code>属性不是必需的。如果您的设计或条件值得使用<code class="literal">sizes</code>属性，您可以自由使用它。</p>
@@ -334,7 +334,7 @@
     &lt;title&gt;Retina.js - JavaScript Solution&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-   <strong>&lt;img src="images/grandmasters-default.jpg" alt=""&gt;</strong>
+   <strong>&lt;img src="img/grandmasters-default.jpg" alt=""&gt;</strong>
    &lt;script src="js/retina.min.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</pre>
@@ -343,10 +343,10 @@
 <p><code class="literal">Retina.js</code>的JavaScript解决方案的基本功能是在页面中查找图像，如果服务器上存在图像，则将其替换为高分辨率版本。</p>
 <p>您需要在高分辨率图像的名称末尾使用<code class="literal">@2x</code>修饰符命名。</p>
 <p>换句话说，如果您有以下图像：</p>
-<pre class="programlisting">&lt;img src="images/grandmasters-default.jpg" alt=""&gt;</pre>
+<pre class="programlisting">&lt;img src="img/grandmasters-default.jpg" alt=""&gt;</pre>
 
 <p>Retina.js将其替换为以下内容：</p>
-<pre class="programlisting">&lt;img src="images/grandmasters-default<strong>@2x</strong>.jpg" alt=""&gt;</pre>
+<pre class="programlisting">&lt;img src="img/grandmasters-default<strong>@2x</strong>.jpg" alt=""&gt;</pre>
 
 <p>只要服务器上存在<code class="literal">@2x</code>映像，<code class="literal">Retina.js</code>就会替换它。如果图像不存在，则它不会替换它。</p>
 <h3 class="title" id="sigil_toc_id_249"><a id="ch06lvl3sec44"/>不包括图像</h3>
@@ -354,7 +354,7 @@
 
 
 <p>如果您<a id="id476" class="indexterm"/>已经排除或想要排除图像被<code class="literal">Retina.js</code>替换，您可以将<code class="literal">data-no-retina</code>属性添加到您的图像中：</p>
-<pre class="programlisting">&lt;img src="images/grandmasters-default.jpg" alt="" <strong>data-no-retina</strong>&gt;</pre>
+<pre class="programlisting">&lt;img src="img/grandmasters-default.jpg" alt="" <strong>data-no-retina</strong>&gt;</pre>
 
 
 
@@ -383,18 +383,18 @@
 <pre class="programlisting">.hero {
     width: 100%;
     height: 510px;
-    @include at2x('../images/grandmasters-default', jpg, 100%, auto);
+    @include at2x('img/grandmasters-default', jpg, 100%, auto);
 }</pre>
 
 <p>我们需要<a id="id478" class="indexterm"/>将<strong>文件扩展名</strong>、<strong>宽度</strong>和<strong>高度</strong>声明为逗号分隔的值。前面的Sass代码段将编译为：</p>
 <pre class="programlisting">.hero {
     width: 100%;
     height: 510px;
-    background-image: url("../images/grandmasters-default.jpg");
+    background-image: url("img/grandmasters-default.jpg");
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
     .hero {
-        background-image: url("../images/grandmasters-default@2x.jpg");
+        background-image: url("img/grandmasters-default@2x.jpg");
         background-size: 100% auto;
     }
 }</pre>
@@ -688,7 +688,7 @@
 
 
 <p>让我们将图标字体文件命名为<code class="literal">icon-font.woff</code>。创建一个<code class="literal">/fonts</code>文件夹并将<code class="literal">icon-font.woff</code>文件保存在其中。这就是我们要尝试实现的：一个软蓝色链接，左侧有一个图标<a id="id512" class="indexterm"/>，没有下划线，字体为40px Arial/Helvetica：</p>
-<p><img src="graphics/B02102_06_06.jpg" alt="Implementing icon fonts"/></p>
+<p><img src="img/B02102_06_06.jpg" alt="Implementing icon fonts"/></p>
 <h4 class="title" id="sigil_toc_id_267"><a id="ch06lvl4sec22"/>使用伪元素</h4>
 
 
@@ -1032,7 +1032,7 @@ a {
 
 
 <p>SVG是<a id="id536" class="indexterm"/>一种图像<a id="id537" class="indexterm"/>文件，因此在<code class="literal">&lt;img&gt;</code>中调用它完全有效：</p>
-<pre class="programlisting">&lt;img src="images/headphones.svg" alt="Headphones"&gt;</pre>
+<pre class="programlisting">&lt;img src="img/headphones.svg" alt="Headphones"&gt;</pre>
 
 <p>我们知道SVG在现代浏览器中具有完美的支持，但以前的图像在传统浏览器（IE8及以下版本）中不显示。</p>
 <p>还记得前面关于SVG和HTML中的<code class="literal">xlink:href</code>和<code class="literal">src</code>属性的解释吗？好吧，我们要做的和我们在那里做的差不多。但是，我们不需要内联SVG标记，只需要链接到一个SVG文件，同时为旧浏览器提供一个回退图像。</p>
