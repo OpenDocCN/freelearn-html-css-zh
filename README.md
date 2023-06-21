@@ -4,22 +4,22 @@
 > 
 > 前面是山，我们就爬山；前面是海，我们就渡海；前面是皇宫，我们就开炮！——《龙族前传》
 
-* [在线阅读](https://htcs.apachecn.org)
+* [在线阅读](https://htcs.flygon.net)
 ## 下载
 
 ### Docker
 
 ```
-docker pull apachecn0/apachecn-html-css-zh
-docker run -tid -p <port>:80 apachecn0/apachecn-html-css-zh
+docker pull apachecn0/flygon-html-css-zh
+docker run -tid -p <port>:80 apachecn0/flygon-html-css-zh
 # 访问 http://localhost:{port} 查看文档
 ```
 
 ### NPM
 
 ```
-npm install -g apachecn-html-css-zh
-apachecn-html-css-zh <port>
+npm install -g flygon-html-css-zh
+flygon-html-css-zh <port>
 # 访问 http://localhost:{port} 查看文档
 ```
 
