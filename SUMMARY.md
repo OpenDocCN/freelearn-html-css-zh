@@ -7,7 +7,7 @@
 +   [HTML5 画布秘籍](docs/h5-cnvs-cb/README.md)
 +   [HTML5 数据服务秘籍](docs/h5-dt-svc-cb/README.md)
 +   [面向 Flash 开发者的 HTML5](docs/h5-fls-dev/README.md)
-+   [HTML5 游戏开发示例](docs/h5-gm-dev-ex/README.md)
++   [HTML5 游戏开发示例](docs/h5-gm-dev-ex-bgd/README.md)
 +   [GameMaker HTML5 游戏开发](docs/h5-gm-dev-gmkr/README.md)
 +   [ImpactJS HTML5 游戏开发](docs/h5-gm-dev-impact/README.md)
 +   [HTML5 图形和数据可视化秘籍](docs/h5-gph-dtvz-cb/README.md)
