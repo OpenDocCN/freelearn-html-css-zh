@@ -13,4 +13,3 @@
 +   [第十二章 多媒体](h5-dr-svc-cb_12.md)
 +   [附录 A. 安装 Node.js 和使用 npm](h5-dr-svc-cb_13.md)
 +   [附录 B.社区和资源](h5-dr-svc-cb_14.md)
-+   [第十三章：索引](h5-dr-svc-cb_15.md)

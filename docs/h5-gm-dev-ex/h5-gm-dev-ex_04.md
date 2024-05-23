@@ -1,4 +1,4 @@
-# 第四章。使用 Canvas 和绘图 API 构建 Untangle 游戏
+# 第四章：使用 Canvas 和绘图 API 构建 Untangle 游戏
 
 > HTML5 中一个突出的新功能是 Canvas 元素。我们可以将画布元素视为一个动态区域，可以使用脚本在上面绘制图形和形状。
 > 

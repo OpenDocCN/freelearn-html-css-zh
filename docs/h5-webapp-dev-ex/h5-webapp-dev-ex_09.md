@@ -1,4 +1,4 @@
-# 第九章。Web Workers Unite
+# 第九章：Web Workers Unite
 
 > "如果你想要有创造力的工作者，就给他们足够的玩耍时间。"
 

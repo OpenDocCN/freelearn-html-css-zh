@@ -1,4 +1,4 @@
-# 第三章。实施得到的智慧
+# 第三章：实施得到的智慧
 
 > *你通常在第一次实施解决方案之后才真正理解问题 -《大教堂与集市》（[`www.catb.org/esr/writings/cathedral-bazaar/cathedral-bazaar/ar01s02.html`](http://www.catb.org/esr/writings/cathedral-bazaar/cathedral-bazaar/ar01s02.html)）*
 

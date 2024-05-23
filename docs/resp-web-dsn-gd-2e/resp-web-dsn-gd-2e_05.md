@@ -1,4 +1,4 @@
-# 第五章。使用 Bootstrap 开发投资组合网站
+# 第五章：使用 Bootstrap 开发投资组合网站
 
 *Bootstrap ([`getbootstrap.com/`](http://getbootstrap.com/)) 是最坚固的前端开发框架之一。它具有令人惊叹的功能，如响应式网格、用户界面组件和 JavaScript 库，让我们能够快速构建响应式网站。*
 

@@ -1,4 +1,4 @@
-# 第二章 WebSocket API
+# 第二章：WebSocket API
 
 如果您熟悉 HTML 和 JavaScript，您已经了解足够的知识来立即开始开发 HTML5 WebSockets。WebSocket 通信和数据传输是双向的，因此我们需要两方来建立它：服务器和客户端。本章重点介绍 HTML5 Web 客户端，并介绍 WebSocket 客户端 API。
 

@@ -1,4 +1,4 @@
-# 第一章。使用 Dreamweaver CS6 创建站点和页面
+# 第一章：使用 Dreamweaver CS6 创建站点和页面
 
 本书以压缩的方式涵盖了 Dreamweaver CS6 中可用的整个尖端和高级功能范围。我们重点介绍了 HTML5 中的新功能，这些功能可以结构化内容并使其更易访问，CSS3 样式可以为元素添加转换（如旋转）和效果（如圆角），以及使用 HTML5 媒体查询和 jQuery Mobile 进行移动设计。Dreamweaver CS6 提供了实现所有这些功能的重要工具。
 

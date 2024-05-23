@@ -1,4 +1,4 @@
-# 第十章。CSS 图表
+# 第十章：CSS 图表
 
 通过简单的谷歌搜索，我们发现有很多令人惊叹的图表库，比如**Google Chart Tools**（[`developers.google.com/chart/`](https://developers.google.com/chart/)）、**Highcharts**（[`www.highcharts.com/`](http://www.highcharts.com/)）和**gRaphael**（[`g.raphaeljs.com/`](http://g.raphaeljs.com/)），仅举几例。我们可能不知道的是，有一些 CSS 技术可以让我们创建完全功能的图表，而不使用 JavaScript 库。在本章中，我们将探讨其中一些技术，以下是主题：
 

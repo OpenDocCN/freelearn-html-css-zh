@@ -1,4 +1,4 @@
-# 第九章。Calc, Gradients, and Shadows
+# 第九章：Calc, Gradients, and Shadows
 
 在上一章中，我们分析了 flexbox 和基于 flexbox 模型的简单结构。在本章中，我们将专注于 CSS 的以下方面：
 

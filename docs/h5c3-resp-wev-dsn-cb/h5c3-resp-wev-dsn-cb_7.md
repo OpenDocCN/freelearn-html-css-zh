@@ -1,4 +1,4 @@
-# 第七章。不显眼的 JavaScript
+# 第七章：不显眼的 JavaScript
 
 在本章中，您将学到：
 

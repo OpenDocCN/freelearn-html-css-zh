@@ -5,4 +5,3 @@
 +   [第四章。避免重复造轮子](less-webdev-ess_4.md)
 +   [第五章 将 Less 集成到你自己的项目中](less-webdev-ess_5.md)
 +   [第六章。Bootstrap 3，WordPress 和其他应用程序](less-webdev-ess_6.md)
-+   [第七章：索引](less-webdev-ess_7.md)

@@ -1,4 +1,4 @@
-# 第八章。增强移动站点
+# 第八章：增强移动站点
 
 在第七章中，*使用 jQuery Mobile 创建移动页面*，我们介绍了在 Dreamweaver 中构建 jQuery Mobile 站点所需的基本步骤。在这个过程中，我们专注于向 jQuery Mobile HTML 页面添加页面元素，并构建链接到这些页面的列表视图。
 

@@ -1,4 +1,4 @@
-# 第八章。导出到 HTML5
+# 第八章：导出到 HTML5
 
 在第五章中，*一次编码，到处发布*，我们花了一些时间学习了 CreateJS JavaScript 框架以及 Flash Professional CS6 的 CreateJS Toolkit 插件（[`www.adobe.com/ca/products/flash/flash-to-html5.html`](http://www.adobe.com/ca/products/flash/flash-to-html5.html)），以及它们如何可以轻松地将您对 Flash 开发的现有知识直接整合到 HTML5 项目中。在过去的一年里，Adobe 已经采用了这个框架作为在 HTML5 项目中处理基于 Flash 的资产的官方方式。也就是说，实际上有许多其他方法可以在尝试直接将基于 Flash 的应用程序和游戏移植到纯 HTML5 时实现类似的效果。在本章中，我们将继续探讨一些可能帮助您进行资产和代码开发流程的第三方工具和应用程序。
 

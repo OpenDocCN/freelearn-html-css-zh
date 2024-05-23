@@ -1,4 +1,4 @@
-# 第一章 WebSocket – a Handshake!
+# 第一章：WebSocket – a Handshake!
 
 在现实生活中，握手是温柔地握住两个人的手，然后进行简短的上下移动。如果你以这种方式问候过某人，那么你已经理解了 HTML5 WebSocket 协议的基本概念。
 
