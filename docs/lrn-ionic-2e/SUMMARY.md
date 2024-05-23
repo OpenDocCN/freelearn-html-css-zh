@@ -1,3 +1,4 @@
++   [Ionic 学习手册第二版](README.md)
 +   [前言](lrn-ionic-2e_00.md)
 +   [第一章：Angular - 入门](lrn-ionic-2e_01.md)
 +   [第二章：欢迎来到 Ionic](lrn-ionic-2e_02.md)
